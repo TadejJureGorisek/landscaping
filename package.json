@@ -1,0 +1,25 @@
+{
+  "name": "zelena-pot-website",
+  "version": "1.0.0",
+  "description": "Osnovna spletna stran za majhno podjetje za urejanje okolice, pripravljena za Railway in GitHub.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "website",
+    "railway",
+    "express",
+    "starter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
