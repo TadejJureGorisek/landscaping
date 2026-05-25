@@ -1,34 +1,45 @@
-# Zelena Pot — spletna stran za urejanje okolice
+# Icarus Landscaping Website
 
-Osnovna odzivna spletna stran za majhno podjetje za urejanje okolice. Vključuje razdelke za košnjo trave, ročno obrezovanje grmovja, kidanje snega in obrazec za povpraševanje.
+Slovenska spletna stran za storitve košnje trave, ročnega obrezovanja grmovja in kidanja snega. Projekt je pripravljen za GitHub in Railway.
 
 ## Zagon lokalno
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-Nato odprite `http://localhost:3000`.
+Stran bo na voljo na `http://localhost:3000`.
 
-## Objavitev na Railway prek GitHuba
+## Kontaktni obrazec
 
-1. Ustvarite nov GitHub repozitorij.
-2. Potisnite projekt v repozitorij.
-3. V Railway izberite **New Project → Deploy from GitHub repo**.
-4. Izberite svoj repozitorij.
-5. Railway bi moral zaznati Node aplikacijo in zagnati `npm start`.
+Obrazec pošlje e-pošto na:
 
-## Datoteke
+`tadejjure.gorisek@gmail.com`
 
-- `server.js` — Express strežnik za Railway.
-- `public/index.html` — Postavitev spletne strani.
-- `public/style.css` — Odzivno oblikovanje.
-- `public/script.js` — Mobilni meni in demo obnašanje obrazca.
-- `.env.example` — Primer datoteke za okoljske spremenljivke.
+Zadeva e-pošte je vedno:
 
-## Kaj še prilagoditi
+`POVPRAŠEVANJE`
 
-- Zamenjajte `Zelena Pot` z imenom svojega podjetja.
-- Dodajte svojo telefonsko številko, e-pošto, območje dela in prave fotografije.
-- Povežite obrazec za povpraševanje z e-pošto, bazo podatkov ali storitvijo za obrazce.
+Za delovanje obrazca morate nastaviti SMTP okoljske spremenljivke.
+
+## Railway nastavitve
+
+V Railway dodajte te environment variables:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+```
+
+Če uporabljate Gmail, morate ustvariti **App Password** v Google računu. Navadno geslo za Gmail običajno ne bo delovalo.
+
+## Deploy
+
+1. Naložite projekt na GitHub.
+2. V Railway ustvarite nov projekt iz GitHub repozitorija.
+3. Dodajte zgornje SMTP environment variables.
+4. Railway bo zagnal `npm start`.
