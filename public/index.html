@@ -1,135 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zanesljive lokalne storitve urejanja okolice: košnja trave, ročno obrezovanje grmovja ter kidanje snega z dovozov in poti." />
-  <title>Icarus Landscaping | Košnja, obrezovanje in kidanje snega</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icarus Landscaping</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="#home" class="logo">Icarus<span> Landscaping</span></a>
-      <button class="menu-toggle" aria-label="Odpri navigacijo" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#services">Storitve</a>
-        <a href="#about">O nas</a>
-        <a href="#contact">Kontakt</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Lokalno • Zanesljivo • Vse leto</p>
-          <h1>Urejena trata, lepo obrezano grmovje in očiščene zimske poti.</h1>
-          <p class="hero-text">Prijazna pomoč pri urejanju okolice za lastnike hiš, ki želijo imeti dvorišče, dovoz in poti urejene brez skrbi.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="button primary">Zahtevajte brezplačno ponudbo</a>
-            <a href="#services" class="button secondary">Oglejte si storitve</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h2>Kaj delamo</h2>
-          <ul>
-            <li>Košnja trave in čiščenje trate</li>
-            <li>Ročno obrezovanje grmovja</li>
-            <li>Kidanje snega z dovozov</li>
-            <li>Čiščenje poti in pločnikov</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section services">
-      <div class="container">
-        <p class="eyebrow">Storitve</p>
-        <h2>Preprosta skrb za okolico v vsakem letnem času</h2>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="icon">🌱</span>
-            <h3>Košnja trave</h3>
-            <p>Redna košnja, da je vaša trata čista, enakomerno pokošena in lepo vzdrževana skozi sezono rasti.</p>
-          </article>
-          <article class="service-card">
-            <span class="icon">✂️</span>
-            <h3>Ročno obrezovanje grmovja</h3>
-            <p>Natančno ročno obrezovanje grmov, živih mej in okrasnega rastlinja, da je vaša okolica urejena.</p>
-          </article>
-          <article class="service-card">
-            <span class="icon">❄️</span>
-            <h3>Kidanje snega</h3>
-            <p>Čiščenje dovozov, poti in pločnikov po sneženju, da je dostop do vašega doma varnejši in lažji.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section split-section">
-      <div class="container split-grid">
-        <div>
-          <p class="eyebrow">Zakaj izbrati nas</p>
-          <h2>Majhno podjetje, ki vsako zemljišče obravnava skrbno.</h2>
-          <p>Osredotočamo se na zanesljivo storitev, jasno komunikacijo in pošteno delo. Ne glede na to, ali potrebujete tedensko košnjo ali pomoč po močnem sneženju, vam pomagamo, da je zunanjost doma vedno urejena.</p>
-        </div>
-        <div class="feature-list">
-          <div><strong>Prilagodljiv urnik</strong><span>Enkratni obiski ali redno vzdrževanje.</span></div>
-          <div><strong>Urejen zaključek</strong><span>Za seboj pustimo čisto dvorišče, poti in dovoz.</span></div>
-          <div><strong>Lokalna storitev</strong><span>Prijazna pomoč majhnega lokalnega podjetja.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="container contact-card">
-        <div>
-          <p class="eyebrow">Začnimo</p>
-          <h2>Potrebujete košnjo, obrezovanje ali kidanje snega?</h2>
-          <p>Pošljite sporočilo z naslovom, opisom dela in pogostostjo storitve, ki jo potrebujete.</p>
-        </div>
-        <form class="contact-form" id="quoteForm">
-          <label>
-            Ime
-            <input type="text" name="name" placeholder="Vaše ime" required>
-          </label>
-          <label>
-            Telefon ali e-pošta
-            <input type="text" name="contact" placeholder="Kako naj vas kontaktiramo?" required>
-          </label>
-          <label>
-            Potrebna storitev
-            <select name="service" required>
-              <option value="">Izberite storitev</option>
-              <option>Košnja trave</option>
-              <option>Ročno obrezovanje grmovja</option>
-              <option>Kidanje snega</option>
-              <option>Več storitev</option>
-            </select>
-          </label>
-          <label>
-            Sporočilo
-            <textarea name="message" rows="4" placeholder="Povejte nam nekaj o svoji okolici"></textarea>
-          </label>
-          <button class="button primary" type="submit">Pošlji povpraševanje</button>
-          <p class="form-note" id="formNote">Obrazec bo poslal povpraševanje neposredno na e-pošto podjetja.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Icarus Landscaping. Vse pravice pridržane.</p>
-      <p>Košnja trave • Obrezovanje grmovja • Kidanje snega</p>
-    </div>
-  </footer>
-
-  <script src="/script.js"></script>
+<div class="container">
+<h1>Icarus Landscaping</h1>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Ime" required>
+<input type="text" id="contact" placeholder="Telefon ali e‑pošta" required>
+<select id="service">
+<option>Košnja trave</option>
+<option>Obrezovanje grmovnic</option>
+<option>Kidanje snega</option>
+</select>
+<textarea id="message" placeholder="Sporočilo"></textarea>
+<button type="submit">Pošlji povpraševanje</button>
+<p id="status"></p>
+</form>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

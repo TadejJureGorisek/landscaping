@@ -1,26 +1,13 @@
 {
-  "name": "zelena-pot-website",
+  "name": "icarus-landscaping",
   "version": "1.0.0",
-  "description": "Osnovna spletna stran za majhno podjetje za urejanje okolice, pripravljena za Railway in GitHub.",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "website",
-    "railway",
-    "express",
-    "starter"
-  ],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.16"
-  },
-  "engines": {
-    "node": ">=18"
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "resend": "^3.2.0"
   }
 }

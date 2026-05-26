@@ -1,48 +1,32 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const quoteForm = document.querySelector('#quoteForm');
-const formNote = document.querySelector('#formNote');
-const year = document.querySelector('#year');
 
-year.textContent = new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-menuButton.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-});
+  const status = document.getElementById('status');
+  status.innerText = 'Pošiljanje...';
 
-quoteForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const submitButton = quoteForm.querySelector('button[type="submit"]');
-  const formData = new FormData(quoteForm);
-  const data = Object.fromEntries(formData.entries());
-
-  submitButton.disabled = true;
-  submitButton.textContent = 'Pošiljanje...';
-  formNote.textContent = 'Pošiljamo vaše povpraševanje.';
+  const body = {
+    name: document.getElementById('name').value,
+    contact: document.getElementById('contact').value,
+    service: document.getElementById('service').value,
+    message: document.getElementById('message').value,
+  };
 
   try {
-    const response = await fetch('/api/contact', {
+    const res = await fetch('/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
     });
 
-    const result = await response.json();
+    const data = await res.json();
 
-    if (!response.ok || !result.ok) {
-      throw new Error(result.message || 'Pošiljanje ni uspelo.');
+    if (data.success) {
+      status.innerText = 'Povpraševanje uspešno poslano!';
+    } else {
+      status.innerText = 'Napaka pri pošiljanju.';
     }
-
-    formNote.textContent = result.message;
-    quoteForm.reset();
-  } catch (error) {
-    formNote.textContent = error.message || 'Prišlo je do napake. Poskusite znova.';
-  } finally {
-    submitButton.disabled = false;
-    submitButton.textContent = 'Pošlji povpraševanje';
+  } catch (err) {
+    status.innerText = 'Napaka povezave.';
   }
 });
