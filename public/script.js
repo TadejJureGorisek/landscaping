@@ -1,32 +1,44 @@
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const form = document.getElementById("contactForm");
+const statusEl = document.getElementById("formStatus");
 
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
 
-  const status = document.getElementById('status');
-  status.innerText = 'Pošiljanje...';
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => navLinks.classList.remove("open"));
+});
 
-  const body = {
-    name: document.getElementById('name').value,
-    contact: document.getElementById('contact').value,
-    service: document.getElementById('service').value,
-    message: document.getElementById('message').value,
-  };
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  statusEl.classList.remove("error");
+  statusEl.textContent = "Pošiljanje...";
+
+  const formData = new FormData(form);
+  const payload = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch('/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+    const response = await fetch("/api/povprasevanje", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
     });
 
-    const data = await res.json();
+    const result = await response.json();
 
-    if (data.success) {
-      status.innerText = 'Povpraševanje uspešno poslano!';
-    } else {
-      status.innerText = 'Napaka pri pošiljanju.';
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Napaka pri pošiljanju.");
     }
-  } catch (err) {
-    status.innerText = 'Napaka povezave.';
+
+    statusEl.textContent = result.message;
+    form.reset();
+  } catch (error) {
+    statusEl.classList.add("error");
+    statusEl.textContent = error.message || "Prišlo je do napake. Poskusite znova.";
   }
 });

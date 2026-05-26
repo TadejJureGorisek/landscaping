@@ -1,28 +1,168 @@
-
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Icarus Landscaping</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icarus Landscaping | Urejanje okolice, košenje in odstranjevanje snega</title>
+  <meta name="description" content="Icarus Landscaping ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-<div class="container">
-<h1>Icarus Landscaping</h1>
-<form id="contactForm">
-<input type="text" id="name" placeholder="Ime" required>
-<input type="text" id="contact" placeholder="Telefon ali e‑pošta" required>
-<select id="service">
-<option>Košnja trave</option>
-<option>Obrezovanje grmovnic</option>
-<option>Kidanje snega</option>
-</select>
-<textarea id="message" placeholder="Sporočilo"></textarea>
-<button type="submit">Pošlji povpraševanje</button>
-<p id="status"></p>
-</form>
-</div>
-<script src="script.js"></script>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#domov" class="brand">
+        <span class="brand-mark">I</span>
+        <span>Icarus Landscaping</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Odpri meni">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#storitve">Storitve</a>
+        <a href="#onas">O nas</a>
+        <a href="#povprasevanje">Povpraševanje</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="domov" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Lokalno. Zanesljivo. Urejeno.</p>
+          <h1>Poskrbimo, da je vaša okolica vedno urejena.</h1>
+          <p class="hero-text">
+            Icarus Landscaping nudi urejanje okolice, košenje trave in odstranjevanje snega
+            na dovozih ter okoli hiše.
+          </p>
+          <div class="hero-actions">
+            <a href="#povprasevanje" class="btn btn-primary">Pošljite povpraševanje</a>
+            <a href="#storitve" class="btn btn-secondary">Naše storitve</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Hitro povpraševanje</h2>
+          <p>Opišite, kaj potrebujete, in javimo se vam nazaj.</p>
+          <ul>
+            <li>Košenje trave</li>
+            <li>Urejanje okolice</li>
+            <li>Odstranjevanje snega</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="storitve" class="section">
+      <div class="container">
+        <p class="eyebrow centered">Naše storitve</p>
+        <h2 class="section-title">Kaj ponujamo</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🌿</div>
+            <h3>Urejanje okolice</h3>
+            <p>Poskrbimo za urejen videz vaše okolice, poti, robove, grmovnice in osnovno vzdrževanje zunanjih površin.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🚜</div>
+            <h3>Košenje</h3>
+            <p>Redna ali enkratna košnja trave za dvorišča, vrtove in druge zelene površine.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">❄️</div>
+            <h3>Odstranjevanje snega</h3>
+            <p>Kidanje in čiščenje snega z dovozov, poti in okolice hiše v zimskih mesecih.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="onas" class="section muted">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">O nas</p>
+          <h2>Lokalna storitev z osebnim pristopom.</h2>
+          <p>
+            Icarus Landscaping je del ideje Icarus Studio, razširjene v praktične lokalne storitve.
+            Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena okolica.
+          </p>
+        </div>
+
+        <div class="features">
+          <div>
+            <strong>Zanesljivost</strong>
+            <span>Držimo se dogovorov in rokov.</span>
+          </div>
+          <div>
+            <strong>Urejeno delo</strong>
+            <span>Za sabo pustimo čisto in urejeno okolico.</span>
+          </div>
+          <div>
+            <strong>Lokalno</strong>
+            <span>Storitve nudimo lokalnim strankam.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="povprasevanje" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Začnimo</p>
+          <h2>Potrebujete košenje, urejanje okolice ali kidanje snega?</h2>
+          <p>
+            Pošljite povpraševanje z opisom dela, okvirno lokacijo in pogostostjo storitve.
+            Odgovorili vam bomo čim prej.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            Ime *
+            <input type="text" name="ime" placeholder="Vaše ime" required />
+          </label>
+
+          <label>
+            Telefon ali e-pošta *
+            <input type="text" name="kontakt" placeholder="Kako naj vas kontaktiramo?" required />
+          </label>
+
+          <label>
+            Potrebna storitev *
+            <select name="storitev" required>
+              <option value="">Izberite storitev</option>
+              <option>Urejanje okolice</option>
+              <option>Košenje</option>
+              <option>Odstranjevanje snega</option>
+              <option>Drugo</option>
+            </select>
+          </label>
+
+          <label>
+            Lokacija
+            <input type="text" name="lokacija" placeholder="Kraj ali približna lokacija" />
+          </label>
+
+          <label>
+            Sporočilo *
+            <textarea name="sporocilo" placeholder="Opišite, kaj potrebujete..." required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary full">Pošlji povpraševanje</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <strong>Icarus Landscaping</strong>
+      <span>© 2026 Vse pravice pridržane.</span>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
