@@ -31,7 +31,7 @@ app.post("/api/povprasevanje", async (req, res) => {
 
     const html = `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-        <h2>Novo povpraševanje - Icarus Landscaping</h2>
+        <h2>Novo povpraševanje - Icarus okolica</h2>
         <p><strong>Ime:</strong> ${escapeHtml(ime)}</p>
         <p><strong>Kontakt:</strong> ${escapeHtml(kontakt)}</p>
         <p><strong>Storitev:</strong> ${escapeHtml(storitev)}</p>
@@ -42,9 +42,9 @@ app.post("/api/povprasevanje", async (req, res) => {
     `;
 
     await resend.emails.send({
-      from: "Icarus Landscaping <onboarding@resend.dev>",
-      to: "icarus.okolica@gmail.com",
-      subject: "POVPRAŠEVANJE",
+      from: "Icarus okolica <onboarding@resend.dev>",
+      to: process.env.TO_EMAIL || "icarus.okolica@gmail.com",
+      subject: "Novo povpraševanje - Icarus okolica",
       html,
       reply_to: kontakt.includes("@") ? kontakt : undefined
     });
@@ -76,5 +76,5 @@ function escapeHtml(value) {
 }
 
 app.listen(PORT, () => {
-  console.log(`Icarus Landscaping running on port ${PORT}`);
+  console.log(`Icarus okolica running on port ${PORT}`);
 });
