@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Icarus Landscaping | Urejanje okolice, košenje in odstranjevanje snega</title>
+  <title>Icarus okolica | Urejanje okolice, košenje in odstranjevanje snega</title>
   <meta name="description"
-    content="Icarus Landscaping ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
+    content="Icarus okolica ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
   <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -20,6 +20,7 @@
       <button class="menu-btn" id="menuBtn" aria-label="Odpri meni">☰</button>
       <div class="nav-links" id="navLinks">
         <a href="#storitve">Storitve</a>
+        <a href="#galerija">Galerija</a>
         <a href="#onas">O nas</a>
         <a href="#povprasevanje">Povpraševanje</a>
       </div>
@@ -33,7 +34,7 @@
           <p class="eyebrow">Lokalno. Zanesljivo. Urejeno.</p>
           <h1>Poskrbimo, da je vaša okolica vedno urejena.</h1>
           <p class="hero-text">
-            Icarus Landscaping nudi urejanje okolice, košenje trave in odstranjevanje snega
+            Icarus okolica nudi urejanje okolice, košenje trave in odstranjevanje snega
             na dovozih ter okoli hiše.
           </p>
           <div class="hero-actions">
@@ -82,13 +83,98 @@
       </div>
     </section>
 
+    <!-- BEFORE / AFTER GALLERY -->
+    <section id="galerija" class="section gallery-section">
+      <div class="container">
+        <p class="eyebrow centered">Naše delo</p>
+        <h2 class="section-title">Pred &amp; Po</h2>
+        <p class="gallery-subtitle">Povlecite drsnik, da vidite razliko.</p>
+
+        <div class="ba-grid">
+
+          <div class="ba-item">
+            <p class="ba-label">Košenje dvorišča</p>
+            <div class="ba-slider" data-slider>
+              <div class="ba-after">
+                <!-- Replace src with your real "after" image -->
+                <img src="/images/kosenje-po.jpg" alt="Po košenju" onerror="this.parentElement.style.background='#197342'" />
+                <span class="ba-tag ba-tag-after">Po</span>
+              </div>
+              <div class="ba-before">
+                <!-- Replace src with your real "before" image -->
+                <img src="/images/kosenje-pred.jpg" alt="Pred košenjem" onerror="this.parentElement.style.background='#6b7c69'" />
+                <span class="ba-tag ba-tag-before">Pred</span>
+              </div>
+              <div class="ba-handle" aria-label="Povlecite za primerjavo">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ba-item">
+            <p class="ba-label">Urejanje okolice</p>
+            <div class="ba-slider" data-slider>
+              <div class="ba-after">
+                <img src="/images/okolica-po.jpg" alt="Po urejanju" onerror="this.parentElement.style.background='#0f5636'" />
+                <span class="ba-tag ba-tag-after">Po</span>
+              </div>
+              <div class="ba-before">
+                <img src="/images/okolica-pred.jpg" alt="Pred urejanjem" onerror="this.parentElement.style.background='#7a8c7b'" />
+                <span class="ba-tag ba-tag-before">Pred</span>
+              </div>
+              <div class="ba-handle" aria-label="Povlecite za primerjavo">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ba-item">
+            <p class="ba-label">Odstranjevanje snega</p>
+            <div class="ba-slider" data-slider>
+              <div class="ba-after">
+                <img src="/images/sneg-po.jpg" alt="Po čiščenju snega" onerror="this.parentElement.style.background='#0b422a'" />
+                <span class="ba-tag ba-tag-after">Po</span>
+              </div>
+              <div class="ba-before">
+                <img src="/images/sneg-pred.jpg" alt="Pred čiščenjem snega" onerror="this.parentElement.style.background='#b8c8d0'" />
+                <span class="ba-tag ba-tag-before">Pred</span>
+              </div>
+              <div class="ba-handle" aria-label="Povlecite za primerjavo">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END BEFORE / AFTER GALLERY -->
+
     <section id="onas" class="section muted">
       <div class="container about-grid">
         <div>
           <p class="eyebrow">O nas</p>
           <h2>Lokalna storitev z osebnim pristopom.</h2>
           <p>
-            Icarus Landscaping je del ideje Icarus Studio, razširjene v praktične lokalne storitve.
+            Icarus okolica je del ideje Icarus Studio, razširjene v praktične lokalne storitve.
             Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena okolica.
           </p>
         </div>
@@ -162,7 +248,7 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <strong>Icarus Landscaping</strong>
+      <strong>Icarus okolica</strong>
       <span>© 2026 Vse pravice pridržane.</span>
     </div>
   </footer>

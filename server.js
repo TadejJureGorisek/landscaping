@@ -43,7 +43,7 @@ app.post("/api/povprasevanje", async (req, res) => {
 
     await resend.emails.send({
       from: "Icarus Landscaping <onboarding@resend.dev>",
-      to: "tadejjure.gorisek@gmail.com",
+      to: "icarus.okolica@gmail.com",
       subject: "POVPRAŠEVANJE",
       html,
       reply_to: kontakt.includes("@") ? kontakt : undefined
