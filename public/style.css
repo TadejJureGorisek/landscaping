@@ -43,7 +43,7 @@ body {
 }
 
 .nav {
-  height: 72px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,15 +59,22 @@ body {
   font-size: 1.25rem;
 }
 
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: var(--green-800);
-  color: var(--white);
-  font-family: Georgia, serif;
+.brand-logo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
