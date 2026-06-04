@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="sl">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Icarus okolica | Urejanje okolice, košenje in odstranjevanje snega</title>
-  <meta name="description"
-    content="Icarus okolica ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Icarus okolica | Urejanje okolice, košenje in odstranjevanje snega</title>
+  <meta name="description" content="Icarus okolica ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
   <link rel="stylesheet" href="/style.css" />
 </head>
-
 <body>
   <header class="site-header">
     <nav class="nav container">
       <a href="#domov" class="brand">
-        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="brand-logo" />
+        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="brand-logo"/>
         <span>Icarus okolica</span>
       </a>
       <button class="menu-btn" id="menuBtn" aria-label="Odpri meni">☰</button>
@@ -22,7 +19,7 @@
         <a href="#storitve">Storitve</a>
         <a href="#galerija">Galerija</a>
         <a href="#onas">O nas</a>
-        <a href="#povprasevanje">Povpraševanje</a>
+        <a href="#cenik">Izračun cene</a>
       </div>
     </nav>
   </header>
@@ -33,16 +30,12 @@
         <div class="hero-content">
           <p class="eyebrow">Lokalno. Zanesljivo. Urejeno.</p>
           <h1>Poskrbimo, da je vaša okolica vedno urejena.</h1>
-          <p class="hero-text">
-            Icarus okolica nudi urejanje okolice, košenje trave in odstranjevanje snega
-            na dovozih ter okoli hiše.
-          </p>
+          <p class="hero-text">Icarus okolica nudi urejanje okolice, košenje trave in odstranjevanje snega na dovozih ter okoli hiše.</p>
           <div class="hero-actions">
-            <a href="#povprasevanje" class="btn btn-primary">Pošljite povpraševanje</a>
+            <a href="#cenik" class="btn btn-primary">Izračunajte ceno</a>
             <a href="#storitve" class="btn btn-secondary">Naše storitve</a>
           </div>
         </div>
-
         <div class="hero-card">
           <h2>Hitro povpraševanje</h2>
           <p>Opišite, kaj potrebujete, in javimo se vam nazaj.</p>
@@ -59,189 +52,319 @@
       <div class="container">
         <p class="eyebrow centered">Naše storitve</p>
         <h2 class="section-title">Kaj ponujamo</h2>
-
         <div class="cards">
-          <article class="card">
-            <div class="icon">🌿</div>
-            <h3>Urejanje okolice</h3>
-            <p>Poskrbimo za urejen videz vaše okolice, poti, robove, grmovnice in osnovno vzdrževanje zunanjih površin.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🚜</div>
-            <h3>Košenje</h3>
-            <p>Redna ali enkratna košnja trave za dvorišča, vrtove in druge zelene površine.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">❄️</div>
-            <h3>Odstranjevanje snega</h3>
-            <p>Kidanje in čiščenje snega z dovozov, poti in okolice hiše v zimskih mesecih.</p>
-          </article>
+          <article class="card"><div class="icon">🌿</div><h3>Urejanje okolice</h3><p>Poskrbimo za urejen videz vaše okolice, poti, robove, grmovnice in osnovno vzdrževanje zunanjih površin.</p></article>
+          <article class="card"><div class="icon">🚜</div><h3>Košenje</h3><p>Redna ali enkratna košnja trave za dvorišča, vrtove in druge zelene površine.</p></article>
+          <article class="card"><div class="icon">❄️</div><h3>Odstranjevanje snega</h3><p>Kidanje in čiščenje snega z dovozov, poti in okolice hiše v zimskih mesecih.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- BEFORE / AFTER GALLERY -->
     <section id="galerija" class="section gallery-section">
       <div class="container">
         <p class="eyebrow centered">Naše delo</p>
         <h2 class="section-title">Pred &amp; Po</h2>
         <p class="gallery-subtitle">Povlecite drsnik, da vidite razliko.</p>
-
         <div class="ba-grid">
-
           <div class="ba-item">
             <p class="ba-label">Košenje dvorišča</p>
             <div class="ba-slider" data-slider>
-              <div class="ba-after">
-                <!-- Replace src with your real "after" image -->
-                <img src="/images/kosenje-po.jpg" alt="Po košenju" onerror="this.parentElement.style.background='#197342'" />
-                <span class="ba-tag ba-tag-after">Po</span>
-              </div>
-              <div class="ba-before">
-                <!-- Replace src with your real "before" image -->
-                <img src="/images/kosenje-pred.jpg" alt="Pred košenjem" onerror="this.parentElement.style.background='#6b7c69'" />
-                <span class="ba-tag ba-tag-before">Pred</span>
-              </div>
-              <div class="ba-handle" aria-label="Povlecite za primerjavo">
-                <div class="ba-handle-line"></div>
-                <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <div class="ba-handle-line"></div>
-              </div>
+              <div class="ba-after"><img src="/images/kosenje-po.jpg" alt="Po košenju"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/kosenje-pred.jpg" alt="Pred košenjem"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
-
           <div class="ba-item">
             <p class="ba-label">Urejanje okolice</p>
             <div class="ba-slider" data-slider>
-              <div class="ba-after">
-                <img src="/images/okolica-po.jpg" alt="Po urejanju" onerror="this.parentElement.style.background='#0f5636'" />
-                <span class="ba-tag ba-tag-after">Po</span>
-              </div>
-              <div class="ba-before">
-                <img src="/images/okolica-pred.jpg" alt="Pred urejanjem" onerror="this.parentElement.style.background='#7a8c7b'" />
-                <span class="ba-tag ba-tag-before">Pred</span>
-              </div>
-              <div class="ba-handle" aria-label="Povlecite za primerjavo">
-                <div class="ba-handle-line"></div>
-                <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <div class="ba-handle-line"></div>
-              </div>
+              <div class="ba-after"><img src="/images/okolica-po.jpg" alt="Po urejanju"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/okolica-pred.jpg" alt="Pred urejanjem"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
-
           <div class="ba-item">
             <p class="ba-label">Odstranjevanje snega</p>
             <div class="ba-slider" data-slider>
-              <div class="ba-after">
-                <img src="/images/sneg-po.jpg" alt="Po čiščenju snega" onerror="this.parentElement.style.background='#0b422a'" />
-                <span class="ba-tag ba-tag-after">Po</span>
-              </div>
-              <div class="ba-before">
-                <img src="/images/sneg-pred.jpg" alt="Pred čiščenjem snega" onerror="this.parentElement.style.background='#b8c8d0'" />
-                <span class="ba-tag ba-tag-before">Pred</span>
-              </div>
-              <div class="ba-handle" aria-label="Povlecite za primerjavo">
-                <div class="ba-handle-line"></div>
-                <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <div class="ba-handle-line"></div>
-              </div>
+              <div class="ba-after"><img src="/images/sneg-po.jpg" alt="Po čiščenju snega"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/sneg-pred.jpg" alt="Pred čiščenjem snega"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-    <!-- END BEFORE / AFTER GALLERY -->
 
     <section id="onas" class="section muted">
       <div class="container about-grid">
         <div>
           <p class="eyebrow">O nas</p>
           <h2>Lokalna storitev z osebnim pristopom.</h2>
-          <p>
-            Icarus okolica je del ideje Icarus Studio, razširjene v praktične lokalne storitve.
-            Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena okolica.
-          </p>
+          <p>Icarus okolica je del ideje Icarus Studio, razširjene v praktične lokalne storitve. Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena okolica.</p>
         </div>
-
         <div class="features">
-          <div>
-            <strong>Zanesljivost</strong>
-            <span>Držimo se dogovorov in rokov.</span>
-          </div>
-          <div>
-            <strong>Urejeno delo</strong>
-            <span>Za sabo pustimo čisto in urejeno okolico.</span>
-          </div>
-          <div>
-            <strong>Lokalno</strong>
-            <span>Storitve nudimo lokalnim strankam.</span>
-          </div>
+          <div><strong>Zanesljivost</strong><span>Držimo se dogovorov in rokov.</span></div>
+          <div><strong>Urejeno delo</strong><span>Za sabo pustimo čisto in urejeno okolico.</span></div>
+          <div><strong>Lokalno</strong><span>Storitve nudimo lokalnim strankam.</span></div>
         </div>
       </div>
     </section>
 
-    <section id="povprasevanje" class="section contact-section">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">Začnimo</p>
-          <h2>Potrebujete košenje, urejanje okolice ali kidanje snega?</h2>
-          <p>
-            Pošljite povpraševanje z opisom dela, okvirno lokacijo in pogostostjo storitve.
-            Odgovorili vam bomo čim prej.
-          </p>
+    <!-- PRICE CALCULATOR -->
+    <section id="cenik" class="calc-section">
+      <div class="container calc-inner">
+        <p class="calc-badge">Brez obveznosti</p>
+        <h2 class="calc-title">Izračunajte ceno</h2>
+        <p class="calc-sub">Izberite storitve ali naročniški paket.</p>
+
+        <div class="calc-tabs">
+          <button class="calc-tab active" id="tabOnce">Enkratna storitev</button>
+          <button class="calc-tab" id="tabSub">Naročnina</button>
         </div>
 
-        <form class="contact-form" id="contactForm">
-          <label>
-            Ime *
-            <input type="text" name="ime" placeholder="Vaše ime" required />
-          </label>
+        <!-- ENKRATNA -->
+        <div id="panelOnce">
+          <div class="svc-grid">
+            <div class="svc-card" id="svc-lawn">
+              <div class="svc-header">
+                <div class="svc-icon">🌿</div>
+                <div class="svc-meta"><p class="svc-name">Košenje trave</p><p class="svc-price">0,25 €/m²</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <div class="svc-input-row">
+                  <input class="svc-input" type="number" placeholder="npr. 400" min="0" id="val-lawn"/>
+                  <span class="svc-unit">m²</span>
+                </div>
+                <div class="svc-options">
+                  <button class="svc-opt on" data-mult="1">Normalno</button>
+                  <button class="svc-opt" data-mult="1.25">Z nagibom</button>
+                  <button class="svc-opt" data-mult="1.5">Zaraščeno</button>
+                </div>
+              </div>
+            </div>
 
-          <label>
-            Telefon ali e-pošta *
-            <input type="text" name="kontakt" placeholder="Kako naj vas kontaktiramo?" required />
-          </label>
+            <div class="svc-card" id="svc-hedge">
+              <div class="svc-header">
+                <div class="svc-icon">✂️</div>
+                <div class="svc-meta"><p class="svc-name">Striženje živice</p><p class="svc-price">3,00 €/tm</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <div class="svc-input-row">
+                  <input class="svc-input" type="number" placeholder="npr. 20" min="0" id="val-hedge"/>
+                  <span class="svc-unit">tm</span>
+                </div>
+                <div class="svc-options">
+                  <button class="svc-opt on" data-mult="1">Nizka (&lt;1m)</button>
+                  <button class="svc-opt" data-mult="1.3">Srednja (1–2m)</button>
+                  <button class="svc-opt" data-mult="1.7">Visoka (&gt;2m)</button>
+                </div>
+              </div>
+            </div>
 
-          <label>
-            Potrebna storitev *
-            <select name="storitev" required>
-              <option value="">Izberite storitev</option>
-              <option>Urejanje okolice</option>
-              <option>Košenje</option>
-              <option>Odstranjevanje snega</option>
-              <option>Drugo</option>
-            </select>
-          </label>
+            <div class="svc-card" id="svc-edge">
+              <div class="svc-header">
+                <div class="svc-icon">⚠️</div>
+                <div class="svc-meta"><p class="svc-name">Rob trava/tlakovci</p><p class="svc-price">fiksno 20 €</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <p class="svc-fixed-price">20 €</p>
+              </div>
+            </div>
 
-          <label>
-            Lokacija
-            <input type="text" name="lokacija" placeholder="Kraj ali približna lokacija" />
-          </label>
+            <div class="svc-card" id="svc-waste">
+              <div class="svc-header">
+                <div class="svc-icon">🚛</div>
+                <div class="svc-meta"><p class="svc-name">Odvoz na deponijo</p><p class="svc-price">fiksno 30 €</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <p class="svc-fixed-price">30 €</p>
+              </div>
+            </div>
 
-          <label>
-            Sporočilo *
-            <textarea name="sporocilo" placeholder="Opišite, kaj potrebujete..." required></textarea>
-          </label>
+            <div class="svc-card" id="svc-snow">
+              <div class="svc-header">
+                <div class="svc-icon">❄️</div>
+                <div class="svc-meta"><p class="svc-name">Kidanje snega</p><p class="svc-price">5,00 €/m²</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <div class="svc-input-row">
+                  <input class="svc-input" type="number" placeholder="npr. 60" min="0" id="val-snow"/>
+                  <span class="svc-unit">m²</span>
+                </div>
+                <div class="svc-options">
+                  <button class="svc-opt on" data-mult="1">Lahek sneg</button>
+                  <button class="svc-opt" data-mult="1.3">Moker sneg</button>
+                  <button class="svc-opt" data-mult="1.6">Led/trda plast</button>
+                </div>
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-primary full">Pošlji povpraševanje</button>
-          <p class="form-status" id="formStatus"></p>
-        </form>
+            <div class="svc-card" id="svc-shrub">
+              <div class="svc-header">
+                <div class="svc-icon">🌳</div>
+                <div class="svc-meta"><p class="svc-name">Obrezovanje grmovja</p><p class="svc-price">od 10 €/kos</p></div>
+                <div class="svc-toggle"></div>
+              </div>
+              <div class="svc-body">
+                <div class="svc-input-row">
+                  <input class="svc-input" type="number" placeholder="npr. 4" min="0" id="val-shrub"/>
+                  <span class="svc-unit">kos</span>
+                </div>
+                <div class="svc-options">
+                  <button class="svc-opt on" data-mult="1">Manjše</button>
+                  <button class="svc-opt" data-mult="1.5">Srednje</button>
+                  <button class="svc-opt" data-mult="2.2">Veliko</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAROČNINA -->
+        <div id="panelSub" style="display:none">
+          <div class="plan-grid">
+
+            <!-- BASIC -->
+            <div class="plan-card" data-plan="basic">
+              <p class="plan-name">Basic</p>
+              <p class="plan-desc">Košenje do 250 m² — prihranite vs. enkratno.</p>
+              <p class="plan-price" id="basicPriceDisplay">50 €<span>/mesec</span></p>
+              <ul class="plan-features" id="basicFeatures">
+                <li>Košenje trave (do 250 m²)</li>
+                <li>1× mesečno</li>
+              </ul>
+              <div class="plan-subtabs">
+                <button class="plan-subtab on" data-tier="standard">Standard<br><small>samo košenje</small></button>
+                <button class="plan-subtab" data-tier="plus">Plus<br><small>+ rob + odvoz</small></button>
+                <button class="plan-subtab" data-tier="gold">Gold<br><small>+ rob + odvoz + živica</small></button>
+                <button class="plan-subtab" data-tier="premium">Premium<br><small>2× mesečno</small></button>
+              </div>
+            </div>
+
+            <!-- PRO -->
+            <div class="plan-card" data-plan="pro" style="border-color:#4caf50">
+              <div class="plan-badge">Najpogostejše</div>
+              <p class="plan-name">Pro</p>
+              <p class="plan-desc">Košenje do 500 m² — prihranite vs. enkratno.</p>
+              <p class="plan-price" id="proPriceDisplay">95 €<span>/mesec</span></p>
+              <ul class="plan-features" id="proFeatures">
+                <li>Košenje trave (do 500 m²)</li>
+                <li>1× mesečno</li>
+                <li>Prednostna obravnava</li>
+              </ul>
+              <div class="plan-subtabs">
+                <button class="plan-subtab on" data-tier="standard">Standard<br><small>samo košenje</small></button>
+                <button class="plan-subtab" data-tier="plus">Plus<br><small>+ rob + odvoz</small></button>
+                <button class="plan-subtab" data-tier="gold">Gold<br><small>+ rob + odvoz + živica</small></button>
+                <button class="plan-subtab" data-tier="premium">Premium<br><small>2× mesečno</small></button>
+              </div>
+            </div>
+
+            <!-- CUSTOM: user inputs quantities, price = enkratno × 85% -->
+            <div class="plan-card" data-plan="custom" data-base="0">
+              <p class="plan-name">Custom</p>
+              <p class="plan-desc">Sestavite paket po meri — 85% enkratne cene.</p>
+              <p class="plan-price" id="customPriceDisplay">— €<span>/mesec</span></p>
+              <div class="custom-freq" id="customFreq">
+                <button class="custom-freq-btn on" data-freq="1">1× mesečno</button>
+                <button class="custom-freq-btn" data-freq="2">2× mesečno<span class="custom-freq-badge">−10%</span></button>
+              </div>
+              <div class="custom-services">
+                <div class="custom-svc" data-svc="lawn" data-rate="0.25" data-type="area" data-unit="m²">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Košenje trave</span>
+                    <span class="custom-svc-price" id="cPrice-lawn">—</span>
+                    <div class="custom-svc-input" id="cInput-lawn" style="display:none">
+                      <input type="number" placeholder="m²" min="0" class="custom-inp" id="cVal-lawn"/>
+                      <span class="custom-unit">m²</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-svc" data-svc="hedge" data-rate="3.00" data-type="area" data-unit="tm">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Striženje živice</span>
+                    <span class="custom-svc-price" id="cPrice-hedge">—</span>
+                    <div class="custom-svc-input" id="cInput-hedge" style="display:none">
+                      <input type="number" placeholder="tm" min="0" class="custom-inp" id="cVal-hedge"/>
+                      <span class="custom-unit">tm</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-svc" data-svc="edge" data-rate="20" data-type="fixed">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Rob trava/tlakovci</span>
+                    <span class="custom-svc-price" id="cPrice-edge">—</span>
+                  </div>
+                </div>
+                <div class="custom-svc" data-svc="waste" data-rate="30" data-type="fixed">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Odvoz na deponijo</span>
+                    <span class="custom-svc-price" id="cPrice-waste">—</span>
+                  </div>
+                </div>
+                <div class="custom-svc" data-svc="snow" data-rate="5.00" data-type="area" data-unit="m²">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Kidanje snega</span>
+                    <span class="custom-svc-price" id="cPrice-snow">—</span>
+                    <div class="custom-svc-input" id="cInput-snow" style="display:none">
+                      <input type="number" placeholder="m²" min="0" class="custom-inp" id="cVal-snow"/>
+                      <span class="custom-unit">m²</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-svc" data-svc="shrub" data-rate="10" data-type="count" data-unit="kos">
+                  <div class="custom-svc-check">✓</div>
+                  <div class="custom-svc-body">
+                    <span class="custom-svc-label">Obrezovanje grmovja</span>
+                    <span class="custom-svc-price" id="cPrice-shrub">—</span>
+                    <div class="custom-svc-input" id="cInput-shrub" style="display:none">
+                      <input type="number" placeholder="kos" min="0" class="custom-inp" id="cVal-shrub"/>
+                      <span class="custom-unit">kos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="custom-price-note"></p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="calc-location">
+          <label>📍 Lokacija</label>
+          <input class="loc-input" type="text" id="inpLocation" placeholder="Vaša ulica ali kraj (npr. Ptuj, Lenart, Slovenj Gradec...)" autocomplete="off"/>
+          <div class="loc-travel" id="travelCost">
+            <span id="travelLabel">Potni stroški</span>
+            <strong id="travelVal"></strong>
+          </div>
+          <small class="loc-small">Izhodišče: Maribor (brezplačno). Potni stroški = 0,60 €/km × 2 (povratna pot).</small>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote-box">
+          <p class="quote-section-label">Vaša ponudba</p>
+          <div id="quoteBody"><p class="quote-empty">Izberite vsaj eno storitev.</p></div>
+          <p class="quote-note">Cene so okvirne brez DDV. Točna cena po ogledu na terenu.</p>
+        </div>
+
+        <!-- Contact -->
+        <div style="margin-bottom:10px;">
+          <input class="c-input" type="text" id="inpContact" placeholder="Vaš e-mail ali telefonska številka" style="width:100%;box-sizing:border-box;"/>
+        </div>
+        <div class="submit-row">
+          <button class="btn-submit" onclick="submitForm()">Pošlji povpraševanje ↗</button>
+          <button class="btn-reset" onclick="resetAll()">Ponastavi</button>
+        </div>
       </div>
     </section>
   </main>
@@ -249,7 +372,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="footer-logo" />
+        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="footer-logo"/>
         <strong>Icarus okolica</strong>
       </div>
       <span>© 2026 Vse pravice pridržane.</span>
@@ -258,5 +381,4 @@
 
   <script src="/script.js"></script>
 </body>
-
 </html>
