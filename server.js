@@ -60,12 +60,20 @@ app.post("/api/povprasevanje", async (req, res) => {
       </div>
     `;
 
+    // Unique subject per inquiry so each lands as a separate email thread
+    const timestamp = new Date().toLocaleString("sl-SI", { timeZone: "Europe/Ljubljana", hour12: false });
+    const subject = `Novo povpraševanje — ${escapeHtml(kontakt)} (${timestamp})`;
+
     await resend.emails.send({
       from: "Icarus okolica <onboarding@resend.dev>",
       to: process.env.TO_EMAIL || "icarus.okolica@gmail.com",
-      subject: "Novo povpraševanje — Icarus okolica",
+      subject,
       html,
-      reply_to: kontakt.includes("@") ? kontakt : undefined
+      reply_to: kontakt.includes("@") ? kontakt : undefined,
+      headers: {
+        // Unique Message-ID prevents Gmail/Outlook from threading emails together
+        "X-Entity-Ref-ID": `povprasevanje-${Date.now()}-${Math.random().toString(36).slice(2)}`
+      }
     });
 
     res.json({ success: true, message: "Hvala! Javili se vam bomo v kratkem." });

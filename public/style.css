@@ -570,7 +570,67 @@ textarea {
 }
 
 
-/* ── Calculator ─────────────────────────────── */
+/* ── Nav contact ─────────────────────────────────────── */
+.nav-contact {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.nav-phone {
+  background: #248a4d;
+  color: #fff !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.nav-phone:hover { background: #2da85d; }
+@media (max-width: 640px) {
+  .nav-contact { display: none; }
+}
+
+/* ── Hero contact card ───────────────────────────────── */
+.hero-contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #e8f5e9;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.hero-contact-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.3); }
+.hero-contact-phone { border-color: rgba(76,175,80,0.5); }
+.hero-contact-phone:hover { border-color: #4caf50; background: rgba(76,175,80,0.1); }
+.hero-contact-icon { font-size: 1.4rem; flex-shrink: 0; }
+.hero-contact-btn span:last-child { display: flex; flex-direction: column; gap: 1px; }
+.hero-contact-btn strong { font-size: 0.95rem; font-weight: 700; }
+.hero-contact-btn small { font-size: 0.72rem; color: #8fbc8f; }
+.hero-contact-divider {
+  text-align: center;
+  color: #4d7a52;
+  font-size: 0.8rem;
+  margin: 4px 0 10px;
+}
+.hero-contact-calc {
+  display: block;
+  text-align: center;
+  color: #8fbc8f;
+  font-size: 0.82rem;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 8px;
+  transition: color 0.15s;
+}
+.hero-contact-calc:hover { color: #e8f5e9; }
 .calc-section {
   background: #062f1f;
   color: #e8f5e9;

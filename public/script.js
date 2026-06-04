@@ -493,6 +493,12 @@ async function submitForm() {
     document.getElementById("quoteBody").innerHTML =
       '<p style="text-align:center;color:#4caf50;font-weight:700;padding:12px 0;font-size:1rem;">✓ Hvala! Javili se vam bomo v kratkem.</p>';
     btn.textContent = "Poslano ✓";
+    // After 3 seconds reset everything so user can submit another inquiry
+    setTimeout(() => {
+      resetAll();
+      btn.textContent = "Pošlji povpraševanje ↗";
+      btn.disabled = false;
+    }, 3000);
   } catch (err) {
     alert(err.message || "Pri pošiljanju je prišlo do napake. Poskusite znova.");
     btn.textContent = "Pošlji povpraševanje ↗";
