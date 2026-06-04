@@ -145,16 +145,12 @@ function updateCustomPrice(svcId) {
   if (!state.customSvcs[svcId]) { priceEl.textContent = '—'; return; }
   const once = calcCustomOnce(svcId);
   const sub = calcCustomSub(svcId);
-  const freq = state.customFreq;
-  const freqLabel = freq === 2 ? '×2×85%×90%' : '×85%';
   if (cfg.type === 'fixed') {
-    priceEl.textContent = `${once} € ${freqLabel} = ${sub} €/mes`;
+    priceEl.textContent = sub > 0 ? `${sub.toFixed(2)} €/mes` : '—';
   } else {
     const inp = document.getElementById('cVal-' + svcId);
     const qty = parseFloat(inp?.value) || 0;
-    priceEl.textContent = qty > 0
-      ? `${qty} ${cfg.unit} × ${cfg.rate} € ${freqLabel} = ${sub} €/mes`
-      : `vnesite ${cfg.unit}`;
+    priceEl.textContent = qty > 0 ? `${sub.toFixed(2)} €/mes` : `vnesite ${cfg.unit}`;
   }
   const total = Object.keys(state.customSvcs).reduce((sum, id) => sum + calcCustomSub(id), 0);
   document.getElementById("customPriceDisplay").innerHTML =
@@ -381,16 +377,15 @@ function updateQuote() {
       const svcs = Object.keys(state.customSvcs);
       if (!svcs.length) { el.innerHTML = '<p class="quote-empty">Izberite storitve v Custom paketu.</p>'; return; }
       const freq = state.customFreq;
-      const freqLabel = freq === 2 ? '2×/mes · ×2×85%×90%' : '1×/mes · ×85%';
+      const freqNote = freq === 2 ? '2× mesečno' : '1× mesečno';
       svcs.forEach(id => {
         const cfg = CUSTOM_RATES[id];
-        const once = calcCustomOnce(id);
         const sub = calcCustomSub(id);
         const inp = document.getElementById('cVal-' + id);
         const qty = inp ? (parseFloat(inp.value) || 0) : 0;
         const detail = cfg.type === 'fixed'
-          ? `${once} € · ${freqLabel}`
-          : qty > 0 ? `${qty} ${cfg.unit} × ${cfg.rate} € · ${freqLabel}` : `vnesite ${cfg.unit}`;
+          ? freqNote
+          : qty > 0 ? `${qty} ${cfg.unit} · ${freqNote}` : `vnesite ${cfg.unit}`;
         rows += `<div class="quote-row">
           <span>${cfg.icon} ${cfg.label}<br><span class="quote-row-sub">${detail}</span></span>
           <span class="quote-val ${sub===0?'dash':''}">${sub > 0 ? sub.toFixed(2)+' €/mes' : '—'}</span>
@@ -480,7 +475,15 @@ async function submitForm() {
     storitve.push({ naziv: "🚗 Potni stroški", podrobnosti: `~${state.travelKm} km`, cena: state.travel + " €" });
   }
 
-  const nacin = mode === "once" ? "Enkratna storitev" : `Naročnina — ${state.selectedPlan?.dataset.plan?.toUpperCase() || ""}`;
+  const nacin = mode === "once"
+    ? "Enkratna storitev"
+    : (() => {
+        const planId = state.selectedPlan?.dataset.plan || "";
+        if (planId === "custom") return `Naročnina — Custom (${state.customFreq}× mesečno)`;
+        const tier = state.activeTier[planId] || "standard";
+        const tierLabel = { standard: "Standard", plus: "Plus", gold: "Gold", premium: "Premium" }[tier] || tier;
+        return `Naročnina — ${planId.charAt(0).toUpperCase() + planId.slice(1)} / ${tierLabel}`;
+      })();
 
   try {
     const res = await fetch("/api/povprasevanje", {
