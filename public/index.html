@@ -358,9 +358,13 @@
         </div>
 
         <!-- Contact -->
-        <div style="margin-bottom:10px;">
+        <div style="margin-bottom:6px;">
           <input class="c-input" type="text" id="inpContact" placeholder="Vaš e-mail ali telefonska številka" style="width:100%;box-sizing:border-box;"/>
         </div>
+        <p style="font-size:0.72rem;color:#4d7a52;margin-bottom:10px;line-height:1.5;">
+          Z oddajo povpraševanja soglašate z obdelavo vaših osebnih podatkov za namen odgovora na povpraševanje.
+          Podatki se ne posredujejo tretjim osebam. <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" style="color:#8fbc8f;text-decoration:underline;">Politika zasebnosti</a>
+        </p>
         <div class="submit-row">
           <button class="btn-submit" onclick="submitForm()">Pošlji povpraševanje ↗</button>
           <button class="btn-reset" onclick="resetAll()">Ponastavi</button>
@@ -369,13 +373,44 @@
     </section>
   </main>
 
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;padding:20px;">
+    <div style="background:#0b3d26;border:1px solid #1a5c36;border-radius:16px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;padding:28px;color:#e8f5e9;position:relative;">
+      <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8fbc8f;font-size:1.4rem;cursor:pointer;">✕</button>
+      <h2 style="font-size:1.2rem;margin-bottom:16px;color:#fff;">Politika zasebnosti</h2>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:10px;">Upravljavec osebnih podatkov:</p>
+      <p style="font-size:0.85rem;margin-bottom:16px;">
+        <strong>ICARUS STUDIO, Tadej Jure Gorišek s.p.</strong><br/>
+        Sarajevska ulica 4, 2000 Maribor<br/>
+        MŠ: 9714472000 | DŠ: 42449545<br/>
+        E-mail: tedejjure.gorisek@gmail.com
+      </p>
+      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Katere podatke zbiramo</h3>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Ob oddaji povpraševanja zbiramo vaš e-mail naslov ali telefonsko številko ter lokacijo, ki jo prostovoljno vpišete.</p>
+      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Namen obdelave</h3>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se uporabijo izključno za odgovor na vaše povpraševanje in morebitno sklenitev pogodbe o storitvi. Pravna podlaga je člen 6(1)(b) GDPR — obdelava je potrebna za izvajanje predpogodbenih ukrepov.</p>
+      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Hramba podatkov</h3>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se hranijo le toliko časa, kolikor je potrebno za namen obdelave, najdlje 1 leto od zadnjega stika.</p>
+      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Posredovanje tretjim osebam</h3>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se ne posredujejo tretjim osebam, razen ponudniku e-poštnih storitev (Resend Inc.) za tehnično dostavo sporočila, ki deluje kot obdelovalec podatkov.</p>
+      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Vaše pravice</h3>
+      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Imate pravico do dostopa, popravka, izbrisa in prenosljivosti vaših podatkov. Za uveljavljanje pravic nas kontaktirajte na <strong style="color:#e8f5e9;">tedejjure.gorisek@gmail.com</strong>. Pritožbo lahko vložite pri Informacijskem pooblaščencu RS (<a href="https://www.ip-rs.si" target="_blank" style="color:#4caf50;">ip-rs.si</a>).</p>
+      <button onclick="document.getElementById('privacyModal').style.display='none'" style="background:#248a4d;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:0.9rem;font-weight:700;cursor:pointer;width:100%;">Zapri</button>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
         <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="footer-logo"/>
         <strong>Icarus okolica</strong>
       </div>
-      <span>© 2026 Vse pravice pridržane.</span>
+      <div style="text-align:right;font-size:0.75rem;color:#6b7c69;line-height:1.7;">
+        <span>ICARUS STUDIO, Tadej Jure Gorišek s.p. | Sarajevska ulica 4, 2000 Maribor</span><br/>
+        <span>MŠ: 9714472000 | DŠ: 42449545 | tedejjure.gorisek@gmail.com</span><br/>
+        <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" style="color:#6b7c69;text-decoration:underline;">Politika zasebnosti</a>
+        &nbsp;·&nbsp; © 2026 Vse pravice pridržane.
+      </div>
     </div>
   </footer>
 
