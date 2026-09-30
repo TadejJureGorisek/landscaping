@@ -1,432 +1,616 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Icarus okolica | Urejanje okolice, košenje in odstranjevanje snega</title>
-  <meta name="description" content="Icarus okolica ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše." />
-<link rel="icon" type="image/png" href="/images/logo-nav.png" />
-  <link rel="apple-touch-icon" href="/images/logo-nav.png" />
-  <link rel="stylesheet" href="/style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Icarus okolica | Urejanje okolice, košenje in odstranjevanje snega</title>
+  <meta name="description" content="Icarus okolica ponuja lokalne storitve urejanja okolice, košenja in odstranjevanja snega na dovozih ter okoli hiše."/>
+  <meta name="theme-color" content="#0a1912"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="sl_SI"/>
+  <meta property="og:title" content="Icarus okolica | Urejanje okolice, košnja in zimska služba"/>
+  <meta property="og:description" content="Lokalno urejanje okolice, košenje trave in odstranjevanje snega v Mariboru in okolici. Izračunajte ceno na spletu."/>
+  <meta property="og:image" content="/images/web/og-image.jpg"/>
+  <link rel="icon" type="image/png" href="/images/logo-nav.png"/>
+  <link rel="apple-touch-icon" href="/images/logo-nav.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..700&display=swap"/>
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high" media="(min-width: 961px)" href="/images/web/hero-1280.webp" imagesrcset="/images/web/hero-1280.webp 1280w, /images/web/hero-2400.webp 2400w" imagesizes="100vw"/>
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high" media="(max-width: 960px)" href="/images/web/hero-portrait-900.webp" imagesrcset="/images/web/hero-portrait-900.webp 900w, /images/web/hero-portrait-1520.webp 1520w" imagesizes="100vw"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
+  <a class="skip-link" href="#vsebina">Preskoči na vsebino</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-pause" viewBox="0 0 256 256"><path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 256 256"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 256 256"><path d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z"/></symbol>
+    <symbol id="i-plant" viewBox="0 0 256 256"><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.49-11.78,43.16-.16,65.74a71.34,71.34,0,0,0-14.17,27L98.33,159c7.82-16.33,7.52-33.35-1-47.49-13.2-21.79-43.67-33.47-81.5-31.25a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM47.81,155.6C32.47,146.31,23.79,124.32,24,96c28.32-.24,50.31,8.47,59.6,23.81,4.85,8,5.64,17.33,2.46,26.94L61.65,122.34a8,8,0,0,0-11.31,11.31l24.41,24.41C65.14,161.24,55.82,160.45,47.81,155.6Zm149.31-10.22c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.31L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.82,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></symbol>
+    <symbol id="i-tree" viewBox="0 0 256 256"><path d="M198.1,62.59a76,76,0,0,0-140.2,0A71.71,71.71,0,0,0,16,127.8C15.9,166,48,199,86.14,200A72.09,72.09,0,0,0,120,192.47V232a8,8,0,0,0,16,0V192.47A72.17,72.17,0,0,0,168,200l1.82,0C208,199,240.11,166,240,127.8A71.71,71.71,0,0,0,198.1,62.59ZM169.45,184a56.08,56.08,0,0,1-33.45-10v-41l43.58-21.78a8,8,0,1,0-7.16-14.32L136,115.06V88a8,8,0,0,0-16,0v51.06L83.58,120.84a8,8,0,1,0-7.16,14.32L120,156.94v17a56,56,0,0,1-33.45,10C56.9,183.23,31.92,157.52,32,127.84A55.77,55.77,0,0,1,67.11,76a8,8,0,0,0,4.53-4.67,60,60,0,0,1,112.72,0A8,8,0,0,0,188.89,76,55.79,55.79,0,0,1,224,127.84C224.08,157.52,199.1,183.23,169.45,184Z"/></symbol>
+    <symbol id="i-snowflake" viewBox="0 0 256 256"><path d="M223.77,150.09a8,8,0,0,1-5.86,9.68l-24.64,6,6.46,24.11a8,8,0,0,1-5.66,9.8A8.25,8.25,0,0,1,192,200a8,8,0,0,1-7.72-5.93l-7.72-28.8L136,141.86v46.83l21.66,21.65a8,8,0,0,1-11.32,11.32L128,203.31l-18.34,18.35a8,8,0,0,1-11.32-11.32L120,188.69V141.86L79.45,165.27l-7.72,28.8A8,8,0,0,1,64,200a8.25,8.25,0,0,1-2.08-.27,8,8,0,0,1-5.66-9.8l6.46-24.11-24.64-6a8,8,0,0,1,3.82-15.54l29.45,7.23L112,128,71.36,104.54l-29.45,7.23A7.85,7.85,0,0,1,40,112a8,8,0,0,1-1.91-15.77l24.64-6L56.27,66.07a8,8,0,0,1,15.46-4.14l7.72,28.8L120,114.14V67.31L98.34,45.66a8,8,0,0,1,11.32-11.32L128,52.69l18.34-18.35a8,8,0,0,1,11.32,11.32L136,67.31v46.83l40.55-23.41,7.72-28.8a8,8,0,0,1,15.46,4.14l-6.46,24.11,24.64,6A8,8,0,0,1,216,112a7.85,7.85,0,0,1-1.91-.23l-29.45-7.23L144,128l40.64,23.46,29.45-7.23A8,8,0,0,1,223.77,150.09Z"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 256 256"><path d="M157.73,113.13A8,8,0,0,1,159.82,102L227.48,55.7a8,8,0,0,1,9,13.21l-67.67,46.3a7.92,7.92,0,0,1-4.51,1.4A8,8,0,0,1,157.73,113.13Zm80.87,85.09a8,8,0,0,1-11.12,2.08L136,137.7,93.49,166.78a36,36,0,1,1-9-13.19L121.83,128,84.44,102.41a35.86,35.86,0,1,1,9-13.19l143,97.87A8,8,0,0,1,238.6,198.22ZM80,180a20,20,0,1,0-5.86,14.14A19.85,19.85,0,0,0,80,180ZM74.14,90.13a20,20,0,1,0-28.28,0A19.85,19.85,0,0,0,74.14,90.13Z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 256 256"><path d="M255.42,117l-14-35A15.93,15.93,0,0,0,226.58,72H192V64a8,8,0,0,0-8-8H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,255.42,117ZM192,88h34.58l9.6,24H192ZM32,72H176v64H32ZM80,208a16,16,0,1,1,16-16A16,16,0,0,1,80,208Zm81-24H111a32,32,0,0,0-62,0H32V152H176v12.31A32.11,32.11,0,0,0,161,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,192,208Zm48-24H223a32.06,32.06,0,0,0-31-24V128h48Z"/></symbol>
+    <symbol id="i-wall" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H224a8,8,0,0,0,8-8V56A8,8,0,0,0,224,48ZM88,144V112h80v32Zm-48,0V112H72v32Zm144-32h32v32H184Zm32-16H136V64h80ZM120,64V96H40V64ZM40,160h80v32H40Zm96,32V160h80v32Z"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+    <symbol id="i-envelope-simple" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 256 256"><path d="M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"/></symbol>
+    <symbol id="i-package" viewBox="0 0 256 256"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></symbol>
+    <symbol id="i-broom" viewBox="0 0 256 256"><path d="M235.5,216.81c-22.56-11-35.5-34.58-35.5-64.8V134.73a15.94,15.94,0,0,0-10.09-14.87L165,110a8,8,0,0,1-4.48-10.34l21.32-53a28,28,0,0,0-16.1-37,28.14,28.14,0,0,0-35.82,16,.61.61,0,0,0,0,.12L108.9,79a8,8,0,0,1-10.37,4.49L73.11,73.14A15.89,15.89,0,0,0,55.74,76.8C34.68,98.45,24,123.75,24,152a111.45,111.45,0,0,0,31.18,77.53A8,8,0,0,0,61,232H232a8,8,0,0,0,3.5-15.19ZM67.14,88l25.41,10.3a24,24,0,0,0,31.23-13.45l21-53c2.56-6.11,9.47-9.27,15.43-7a12,12,0,0,1,6.88,15.92L145.69,93.76a24,24,0,0,0,13.43,31.14L184,134.73V152c0,.33,0,.66,0,1L55.77,101.71A108.84,108.84,0,0,1,67.14,88Zm48,128a87.53,87.53,0,0,1-24.34-42,8,8,0,0,0-15.49,4,105.16,105.16,0,0,0,18.36,38H64.44A95.54,95.54,0,0,1,40,152a85.9,85.9,0,0,1,7.73-36.29l137.8,55.12c3,18,10.56,33.48,21.89,45.16Z"/></symbol>
+    <symbol id="i-flower" viewBox="0 0 256 256"><path d="M210.35,129.36c-.81-.47-1.7-.92-2.62-1.36.92-.44,1.81-.89,2.62-1.36a40,40,0,1,0-40-69.28c-.81.47-1.65,1-2.48,1.59.08-1,.13-2,.13-3a40,40,0,0,0-80,0c0,.94,0,1.94.13,3-.83-.57-1.67-1.12-2.48-1.59a40,40,0,1,0-40,69.28c.81.47,1.7.92,2.62,1.36-.92.44-1.81.89-2.62,1.36a40,40,0,1,0,40,69.28c.81-.47,1.65-1,2.48-1.59-.08,1-.13,2-.13,2.95a40,40,0,0,0,80,0c0-.94-.05-1.94-.13-2.95.83.57,1.67,1.12,2.48,1.59A39.79,39.79,0,0,0,190.29,204a40.43,40.43,0,0,0,10.42-1.38,40,40,0,0,0,9.64-73.28ZM104,128a24,24,0,1,1,24,24A24,24,0,0,1,104,128Zm74.35-56.79a24,24,0,1,1,24,41.57c-6.27,3.63-18.61,6.13-35.16,7.19A40,40,0,0,0,154.53,98.1C163.73,84.28,172.08,74.84,178.35,71.21ZM128,32a24,24,0,0,1,24,24c0,7.24-4,19.19-11.36,34.06a39.81,39.81,0,0,0-25.28,0C108,75.19,104,63.24,104,56A24,24,0,0,1,128,32ZM44.86,80a24,24,0,0,1,32.79-8.79c6.27,3.63,14.62,13.07,23.82,26.89A40,40,0,0,0,88.81,120c-16.55-1.06-28.89-3.56-35.16-7.18A24,24,0,0,1,44.86,80ZM77.65,184.79a24,24,0,1,1-24-41.57c6.27-3.63,18.61-6.13,35.16-7.19a40,40,0,0,0,12.66,21.87C92.27,171.72,83.92,181.16,77.65,184.79ZM128,224a24,24,0,0,1-24-24c0-7.24,4-19.19,11.36-34.06a39.81,39.81,0,0,0,25.28,0C148,180.81,152,192.76,152,200A24,24,0,0,1,128,224Zm83.14-48a24,24,0,0,1-32.79,8.79c-6.27-3.63-14.62-13.07-23.82-26.89A40,40,0,0,0,167.19,136c16.55,1.06,28.89,3.56,35.16,7.18A24,24,0,0,1,211.14,176Z"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Glavni meni">
       <a href="#domov" class="brand">
-        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="brand-logo"/>
+        <img src="/images/logo-nav.png" alt="" class="brand-logo" width="45" height="32"/>
         <span>Icarus okolica</span>
       </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Odpri meni">☰</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Odpri meni" aria-expanded="false" aria-controls="navLinks">
+        <svg class="ico ico-open" aria-hidden="true"><use href="#i-list"/></svg>
+        <svg class="ico ico-close" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
       <div class="nav-links" id="navLinks">
         <a href="#storitve">Storitve</a>
         <a href="#galerija">Galerija</a>
         <a href="#onas">O nas</a>
         <a href="#cenik">Izračun cene</a>
+        <a href="tel:xxx xxx xxx" class="nav-links-phone"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>xxx xxx xxx</a>
       </div>
-      <div class="nav-contact">
-        <a href="tel:xxx xxx xxx" class="nav-phone">📞 xxx xxx xxx</a>
-      </div>
+      <a href="tel:xxx xxx xxx" class="nav-phone"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>xxx xxx xxx</span></a>
     </nav>
   </header>
 
-  <main>
+  <main id="vsebina" tabindex="-1">
     <section id="domov" class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 960px)" type="image/webp" srcset="/images/web/hero-portrait-900.webp 900w, /images/web/hero-portrait-1520.webp 1520w" sizes="100vw"/>
+          <source type="image/webp" srcset="/images/web/hero-1280.webp 1280w, /images/web/hero-2400.webp 2400w" sizes="100vw"/>
+          <img src="/images/web/hero-1920.jpg" alt="" class="hero-img" fetchpriority="high"/>
+        </picture>
+        <video class="hero-video" muted loop playsinline preload="none" data-src="/images/web/hero-loop.mp4" data-src-portrait="/images/web/hero-loop-portrait.mp4"></video>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Lokalno. Zanesljivo. Urejeno.</p>
           <h1>Poskrbimo, da je vaša okolica vedno urejena.</h1>
           <p class="hero-text">Icarus okolica nudi urejanje okolice, košenje trave in odstranjevanje snega na dovozih ter okoli hiše.</p>
           <div class="hero-actions">
-            <a href="#cenik" class="btn btn-primary">Izračunajte ceno</a>
-            <a href="#storitve" class="btn btn-secondary">Naše storitve</a>
+            <a href="#cenik" class="btn btn-primary">Izračunajte ceno<svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a href="#storitve" class="btn btn-ghost">Naše storitve</a>
           </div>
         </div>
-        <div class="hero-card">
-          <h2>Stopite v stik</h2>
-          <p style="color:#8fbc8f;font-size:0.9rem;margin-bottom:18px;">Pokličite nas ali pišite — odgovorimo v kratkem.</p>
-          <a href="tel:xxx xxx xxx" class="hero-contact-btn hero-contact-phone">
-            <span class="hero-contact-icon">📞</span>
-            <span>
-              <strong>xxx xxx xxx</strong>
-              <small>Pokličite nas</small>
-            </span>
+
+        <aside class="hero-card" aria-labelledby="heroCardTitle">
+          <h2 id="heroCardTitle">Stopite v&nbsp;stik</h2>
+          <p class="hero-card-sub">Pokličite nas ali pišite, odgovorimo v&nbsp;kratkem.</p>
+          <a href="tel:xxx xxx xxx" class="hero-contact-btn">
+            <span class="hero-contact-icon"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span class="hero-contact-text"><strong>xxx xxx xxx</strong><small>Pokličite nas</small></span>
+            <svg class="ico hero-contact-go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
           </a>
-          <a href="mailto:icarus.okolica@gmail.com" class="hero-contact-btn hero-contact-email">
-            <span class="hero-contact-icon">✉️</span>
-            <span>
-              <strong>icarus.okolica@gmail.com</strong>
-              <small>Pišite nam</small>
-            </span>
+          <a href="mailto:icarus.okolica@gmail.com" class="hero-contact-btn">
+            <span class="hero-contact-icon"><svg class="ico" aria-hidden="true"><use href="#i-envelope-simple"/></svg></span>
+            <span class="hero-contact-text"><strong>icarus.okolica@<wbr/>gmail.com</strong><small>Pišite nam</small></span>
+            <svg class="ico hero-contact-go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
           </a>
-          <div class="hero-contact-divider">ali</div>
-          <a href="#cenik" class="hero-contact-calc">Izračunajte ceno & pošljite povpraševanje ↓</a>
-        </div>
+          <div class="hero-contact-divider"><span>ali</span></div>
+          <a href="#cenik" class="hero-contact-calc">Izračunajte ceno &amp; pošljite <span class="nowrap">povpraševanje<svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+        </aside>
       </div>
     </section>
 
-    <section id="storitve" class="section">
+    <div class="marquee">
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-group">
+          <span>Košenje trave</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Striženje žive meje</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Urejanje robov</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Obrezovanje grmovja</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Odvoz zelenega odpada</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Odstranjevanje listja</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Kidanje snega</span><svg class="ico"><use href="#i-snowflake"/></svg>
+          <span>Posipanje</span><svg class="ico"><use href="#i-snowflake"/></svg>
+        </div>
+        <div class="marquee-group">
+          <span>Košenje trave</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Striženje žive meje</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Urejanje robov</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Obrezovanje grmovja</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Odvoz zelenega odpada</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Odstranjevanje listja</span><svg class="ico"><use href="#i-leaf"/></svg>
+          <span>Kidanje snega</span><svg class="ico"><use href="#i-snowflake"/></svg>
+          <span>Posipanje</span><svg class="ico"><use href="#i-snowflake"/></svg>
+        </div>
+      </div>
+      <button type="button" class="motion-toggle" id="motionToggle" aria-pressed="false" aria-label="Ustavi animacijo">
+        <svg class="ico ico-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <svg class="ico ico-play" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
+    </div>
+
+    <section id="storitve" class="section services">
       <div class="container">
-        <p class="eyebrow centered">Naše storitve</p>
-        <h2 class="section-title">Kaj ponujamo</h2>
-        <div class="cards">
-          <article class="card"><div class="icon">🌿</div><h3>Urejanje okolice</h3><p>Poskrbimo za urejen videz vaše okolice, poti, robove, grmovnice in osnovno vzdrževanje zunanjih površin.</p></article>
-          <article class="card"><div class="icon">🚜</div><h3>Košenje</h3><p>Redna ali enkratna košnja trave za dvorišča, vrtove in druge zelene površine.</p></article>
-          <article class="card"><div class="icon">❄️</div><h3>Odstranjevanje snega</h3><p>Kidanje in čiščenje snega z dovozov, poti in okolice hiše v zimskih mesecih.</p></article>
+        <div class="section-head reveal">
+          <h2 class="section-title">Kaj ponujamo</h2>
+          <p class="section-sub">Od prve košnje spomladi do zadnjega kidanja&nbsp;pozimi.</p>
+        </div>
+        <div class="bento">
+          <article class="tile tile-lg reveal">
+            <picture>
+              <source type="image/webp" srcset="/images/web/storitev-urejanje-640.webp 640w, /images/web/storitev-urejanje-1100.webp 1100w" sizes="(max-width: 960px) 100vw, (max-width: 1240px) 50vw, 620px"/>
+              <img src="/images/web/storitev-urejanje-1100.webp" alt="Urejen vrt s kamnito potjo, pokošeno trato in obrezanimi grmi" loading="lazy" decoding="async" width="1100" height="1375"/>
+            </picture>
+            <div class="tile-body">
+              <span class="tile-icon"><svg class="ico" aria-hidden="true"><use href="#i-flower"/></svg></span>
+              <h3>Urejanje okolice</h3>
+              <p>Poskrbimo za urejen videz vaše okolice, poti, robove, grmovnice in osnovno vzdrževanje zunanjih površin.</p>
+            </div>
+          </article>
+          <article class="tile reveal">
+            <picture>
+              <source type="image/webp" srcset="/images/web/storitev-kosnja-760.webp 760w, /images/web/storitev-kosnja-1400.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1240px) 50vw, 600px"/>
+              <img src="/images/web/storitev-kosnja-1400.webp" alt="Kosilnica med košnjo trate" loading="lazy" decoding="async" width="1400" height="930"/>
+            </picture>
+            <div class="tile-body">
+              <span class="tile-icon"><svg class="ico" aria-hidden="true"><use href="#i-plant"/></svg></span>
+              <h3>Košenje</h3>
+              <p>Redna ali enkratna košnja trave za dvorišča, vrtove in druge zelene površine.</p>
+            </div>
+          </article>
+          <article class="tile reveal">
+            <picture>
+              <source type="image/webp" srcset="/images/web/storitev-sneg-760.webp 760w, /images/web/storitev-sneg-1400.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1240px) 50vw, 600px"/>
+              <img src="/images/web/storitev-sneg-1400.webp" alt="Očiščen in posut dovoz pred hišo po sneženju" loading="lazy" decoding="async" width="1400" height="930"/>
+            </picture>
+            <div class="tile-body">
+              <span class="tile-icon"><svg class="ico" aria-hidden="true"><use href="#i-snowflake"/></svg></span>
+              <h3>Odstranjevanje snega</h3>
+              <p>Kidanje in čiščenje snega z&nbsp;dovozov, poti in okolice hiše v&nbsp;zimskih mesecih.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="galerija" class="section gallery-section">
-      <div class="container">
-        <p class="eyebrow centered">Naše delo</p>
-        <h2 class="section-title">Pred &amp; Po</h2>
-        <p class="gallery-subtitle">Povlecite drsnik, da vidite razliko.</p>
-        <div class="ba-grid">
-          <div class="ba-item">
-            <p class="ba-label">Košenje dvorišča</p>
-            <div class="ba-slider" data-slider>
-              <div class="ba-after"><img src="/images/kosenje-po.jpg" alt="Po košenju"/><span class="ba-tag ba-tag-after">Po</span></div>
-              <div class="ba-before"><img src="/images/kosenje-pred.jpg" alt="Pred košenjem"/><span class="ba-tag ba-tag-before">Pred</span></div>
-              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
+    <section id="galerija" class="section gallery">
+      <div class="container gallery-grid">
+        <div class="gallery-intro reveal">
+          <h2 class="section-title">Pred &amp; Po</h2>
+          <p class="section-sub">Povlecite drsnik, da vidite razliko.</p>
+          <div class="ba-tabs" role="tablist" aria-label="Primeri našega dela">
+            <button class="ba-tab on" type="button" role="tab" aria-selected="true" aria-controls="baPanel0" id="baTab0" data-ba-tab="0">
+              <svg class="ico" aria-hidden="true"><use href="#i-plant"/></svg><span>Košenje dvorišča</span>
+            </button>
+            <button class="ba-tab" type="button" role="tab" aria-selected="false" aria-controls="baPanel1" id="baTab1" data-ba-tab="1" tabindex="-1">
+              <svg class="ico" aria-hidden="true"><use href="#i-flower"/></svg><span>Urejanje okolice</span>
+            </button>
+            <button class="ba-tab" type="button" role="tab" aria-selected="false" aria-controls="baPanel2" id="baTab2" data-ba-tab="2" tabindex="-1">
+              <svg class="ico" aria-hidden="true"><use href="#i-snowflake"/></svg><span>Odstranjevanje snega</span>
+            </button>
+          </div>
+        </div>
+        <div class="ba-stage reveal">
+          <div class="ba-item on" role="tabpanel" id="baPanel0" aria-labelledby="baTab0" data-ba-panel="0">
+            <div class="ba-slider" data-slider tabindex="0" role="slider" aria-label="Košenje dvorišča: primerjava pred in po" aria-valuemin="2" aria-valuemax="98" aria-valuenow="50" aria-valuetext="50 % pred, 50 % po">
+              <div class="ba-after"><img src="/images/kosenje-po.jpg" alt="Po košenju" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/kosenje-pred.jpg" alt="Pred košenjem" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 5l-5 5 5 5M12 5l5 5-5 5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
-          <div class="ba-item">
-            <p class="ba-label">Urejanje okolice</p>
-            <div class="ba-slider" data-slider>
-              <div class="ba-after"><img src="/images/okolica-po.jpg" alt="Po urejanju"/><span class="ba-tag ba-tag-after">Po</span></div>
-              <div class="ba-before"><img src="/images/okolica-pred.jpg" alt="Pred urejanjem"/><span class="ba-tag ba-tag-before">Pred</span></div>
-              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
+          <div class="ba-item" role="tabpanel" id="baPanel1" aria-labelledby="baTab1" data-ba-panel="1">
+            <div class="ba-slider" data-slider tabindex="0" role="slider" aria-label="Urejanje okolice: primerjava pred in po" aria-valuemin="2" aria-valuemax="98" aria-valuenow="50" aria-valuetext="50 % pred, 50 % po">
+              <div class="ba-after"><img src="/images/okolica-po.jpg" alt="Po urejanju" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/okolica-pred.jpg" alt="Pred urejanjem" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 5l-5 5 5 5M12 5l5 5-5 5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
-          <div class="ba-item">
-            <p class="ba-label">Odstranjevanje snega</p>
-            <div class="ba-slider" data-slider>
-              <div class="ba-after"><img src="/images/sneg-po.jpg" alt="Po čiščenju snega"/><span class="ba-tag ba-tag-after">Po</span></div>
-              <div class="ba-before"><img src="/images/sneg-pred.jpg" alt="Pred čiščenjem snega"/><span class="ba-tag ba-tag-before">Pred</span></div>
-              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 10l-4 0M6 10l-2-2M6 10l-2 2M14 10l4 0M14 10l2-2M14 10l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="ba-handle-line"></div></div>
+          <div class="ba-item" role="tabpanel" id="baPanel2" aria-labelledby="baTab2" data-ba-panel="2">
+            <div class="ba-slider" data-slider tabindex="0" role="slider" aria-label="Odstranjevanje snega: primerjava pred in po" aria-valuemin="2" aria-valuemax="98" aria-valuenow="50" aria-valuetext="50 % pred, 50 % po">
+              <div class="ba-after"><img src="/images/sneg-po.jpg" alt="Po čiščenju snega" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-after">Po</span></div>
+              <div class="ba-before"><img src="/images/sneg-pred.jpg" alt="Pred čiščenjem snega" loading="lazy" decoding="async" draggable="false"/><span class="ba-tag ba-tag-before">Pred</span></div>
+              <div class="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 5l-5 5 5 5M12 5l5 5-5 5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle-line"></div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="onas" class="section muted">
+    <section id="onas" class="section about">
       <div class="container about-grid">
-        <div>
-          <p class="eyebrow">O nas</p>
-          <h2>Lokalna storitev z osebnim pristopom.</h2>
-          <p>Icarus okolica je del ideje Icarus Studio, razširjene v praktične lokalne storitve. Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena okolica.</p>
-        </div>
-        <div class="features">
-          <div><strong>Zanesljivost</strong><span>Držimo se dogovorov in rokov.</span></div>
-          <div><strong>Urejeno delo</strong><span>Za sabo pustimo čisto in urejeno okolico.</span></div>
-          <div><strong>Lokalno</strong><span>Storitve nudimo lokalnim strankam.</span></div>
+        <figure class="about-media reveal">
+          <picture>
+            <source type="image/webp" srcset="/images/web/onas-640.webp 640w, /images/web/onas-1100.webp 1100w" sizes="(max-width: 960px) 100vw, (max-width: 1240px) 45vw, 520px"/>
+            <img src="/images/web/onas-1100.webp" alt="Delovne rokavice in škarje ob sveže obrezanem robu trate" loading="lazy" decoding="async" width="1100" height="1375"/>
+          </picture>
+        </figure>
+        <div class="about-copy reveal">
+          <h2>Lokalna storitev z&nbsp;osebnim pristopom.</h2>
+          <p>Icarus okolica je del ideje Icarus Studio, razširjene v&nbsp;praktične lokalne storitve. Naš cilj je preprosto: zanesljivo delo, jasna komunikacija in urejena&nbsp;okolica.</p>
+          <ul class="features">
+            <li>
+              <span class="feature-icon"><svg class="ico" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
+              <span><strong>Zanesljivost</strong>Držimo se dogovorov in rokov.</span>
+            </li>
+            <li>
+              <span class="feature-icon"><svg class="ico" aria-hidden="true"><use href="#i-broom"/></svg></span>
+              <span><strong>Urejeno delo</strong>Za sabo pustimo čisto in urejeno okolico.</span>
+            </li>
+            <li>
+              <span class="feature-icon"><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg></span>
+              <span><strong>Lokalno</strong>Storitve nudimo lokalnim strankam.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- PRICE CALCULATOR -->
     <section id="cenik" class="calc-section">
+      <div class="calc-bg" aria-hidden="true">
+        <picture>
+          <source type="image/webp" srcset="/images/web/objekt-1024.webp 1024w, /images/web/objekt-1920.webp 1920w" sizes="100vw"/>
+          <img src="/images/web/objekt-1920.webp" alt="" loading="lazy" decoding="async"/>
+        </picture>
+      </div>
       <div class="container calc-inner">
-        <p class="calc-badge">Brez obveznosti</p>
-        <h2 class="calc-title">Izračunajte ceno</h2>
-        <p class="calc-sub">Izberite storitve ali naročniški paket.</p>
+        <header class="calc-head reveal">
+          <h2 class="calc-title">Izračunajte ceno</h2>
+          <p class="calc-sub">Izberite storitve ali naročniški paket. <strong>Brez obveznosti.</strong></p>
+          <div class="calc-tabs" role="group" aria-label="Vrsta storitve">
+            <button class="calc-tab active" id="tabOnce" type="button" aria-pressed="true">Enkratna storitev</button>
+            <button class="calc-tab" id="tabSub" type="button" aria-pressed="false">Naročnina</button>
+          </div>
+        </header>
 
-        <div class="calc-tabs">
-          <button class="calc-tab active" id="tabOnce">Enkratna storitev</button>
-          <button class="calc-tab" id="tabSub">Naročnina</button>
-        </div>
-
-        <!-- ENKRATNA -->
-        <div id="panelOnce">
-          <div class="svc-grid">
-            <div class="svc-card" id="svc-lawn">
-              <div class="svc-header">
-                <div class="svc-icon">🌿</div>
-                <div class="svc-meta"><p class="svc-name">Košenje trave</p><p class="svc-price">0,25 €/m²</p></div>
-                <div class="svc-toggle"></div>
-              </div>
-              <div class="svc-body">
-                <div class="svc-input-row">
-                  <input class="svc-input" type="number" placeholder="npr. 400" min="0" id="val-lawn"/>
-                  <span class="svc-unit">m²</span>
+        <div class="calc-layout">
+          <div class="calc-main">
+            <!-- ENKRATNA -->
+            <div id="panelOnce">
+              <div class="svc-grid">
+                <div class="svc-card" id="svc-lawn">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-lawn">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-plant"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-lawn">Košenje trave</p><p class="svc-price">0,25 €/m²</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="decimal" placeholder="npr. 400" min="0" id="val-lawn" aria-label="Površina trate v m²"/>
+                      <span class="svc-unit">m²</span>
+                    </div>
+                    <div class="svc-options" role="group" aria-label="Stanje trate">
+                      <button class="svc-opt on" type="button" data-mult="1" aria-pressed="true">Normalno</button>
+                      <button class="svc-opt" type="button" data-mult="1.25" aria-pressed="false">Z nagibom</button>
+                      <button class="svc-opt" type="button" data-mult="1.5" aria-pressed="false">Zaraščeno</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="svc-options">
-                  <button class="svc-opt on" data-mult="1">Normalno</button>
-                  <button class="svc-opt" data-mult="1.25">Z nagibom</button>
-                  <button class="svc-opt" data-mult="1.5">Zaraščeno</button>
+
+                <div class="svc-card" id="svc-hedge">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-hedge">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-hedge">Striženje živice</p><p class="svc-price">2,00 €/tm</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="decimal" placeholder="npr. 20" min="0" id="val-hedge" aria-label="Dolžina žive meje v tekočih metrih"/>
+                      <span class="svc-unit">tm</span>
+                    </div>
+                    <div class="svc-options" role="group" aria-label="Višina žive meje">
+                      <button class="svc-opt on" type="button" data-mult="1" aria-pressed="true">Nizka (&lt;1&nbsp;m)</button>
+                      <button class="svc-opt" type="button" data-mult="1.3" aria-pressed="false">Srednja (1-2&nbsp;m)</button>
+                      <button class="svc-opt" type="button" data-mult="1.7" aria-pressed="false">Visoka (&gt;2&nbsp;m)</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="svc-card" id="svc-edge">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-edge">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-wall"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-edge">Rob trava/tlakovci</p><p class="svc-price">1,00 €/tm, min. 20 €</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="decimal" placeholder="npr. 35" min="0" id="val-edge" aria-label="Dolžina roba v tekočih metrih"/>
+                      <span class="svc-unit">tm</span>
+                    </div>
+                    <small class="svc-hint">Do 20 tm je cena fiksnih 20&nbsp;€.</small>
+                  </div>
+                </div>
+
+                <div class="svc-card" id="svc-waste">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-waste">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-waste">Odvoz na deponijo</p><p class="svc-price">30 € / vožnjo</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="numeric" placeholder="npr. 1" min="1" step="1" id="val-waste" aria-label="Število voženj"/>
+                      <span class="svc-unit" data-svc="waste" data-unit-for="val-waste">vožnja</span>
+                    </div>
+                    <small class="svc-hint">Ena vožnja ≈ polna prikolica zelenega odpada. Najmanj 1&nbsp;vožnja.</small>
+                  </div>
+                </div>
+
+                <div class="svc-card" id="svc-snow">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-snow">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-snowflake"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-snow">Kidanje snega</p><p class="svc-price">5,00 €/m²</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="decimal" placeholder="npr. 60" min="0" id="val-snow" aria-label="Površina za kidanje v m²"/>
+                      <span class="svc-unit">m²</span>
+                    </div>
+                    <div class="svc-options" role="group" aria-label="Vrsta snega">
+                      <button class="svc-opt on" type="button" data-mult="1" aria-pressed="true">Lahek sneg</button>
+                      <button class="svc-opt" type="button" data-mult="1.3" aria-pressed="false">Moker sneg</button>
+                      <button class="svc-opt" type="button" data-mult="1.6" aria-pressed="false">Led/trda plast</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="svc-card" id="svc-shrub">
+                  <div class="svc-header" role="switch" tabindex="0" aria-checked="false" aria-labelledby="svcname-shrub">
+                    <div class="svc-icon"><svg class="ico" aria-hidden="true"><use href="#i-tree"/></svg></div>
+                    <div class="svc-meta"><p class="svc-name" id="svcname-shrub">Obrezovanje grmovja</p><p class="svc-price">od 10 €/kos</p></div>
+                    <div class="svc-toggle"></div>
+                  </div>
+                  <div class="svc-body">
+                    <div class="svc-input-row">
+                      <input class="svc-input" type="number" inputmode="numeric" placeholder="npr. 4" min="0" id="val-shrub" aria-label="Število grmov"/>
+                      <span class="svc-unit">kos</span>
+                    </div>
+                    <div class="svc-options" role="group" aria-label="Velikost grmov">
+                      <button class="svc-opt on" type="button" data-mult="1" aria-pressed="true">Manjše</button>
+                      <button class="svc-opt" type="button" data-mult="1.5" aria-pressed="false">Srednje</button>
+                      <button class="svc-opt" type="button" data-mult="2.2" aria-pressed="false">Veliko</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="svc-card" id="svc-hedge">
-              <div class="svc-header">
-                <div class="svc-icon">✂️</div>
-                <div class="svc-meta"><p class="svc-name">Striženje živice</p><p class="svc-price">3,00 €/tm</p></div>
-                <div class="svc-toggle"></div>
-              </div>
-              <div class="svc-body">
-                <div class="svc-input-row">
-                  <input class="svc-input" type="number" placeholder="npr. 20" min="0" id="val-hedge"/>
-                  <span class="svc-unit">tm</span>
+            <!-- NAROČNINA -->
+            <div id="panelSub" style="display:none">
+              <div class="plan-grid">
+
+                <!-- BASIC -->
+                <div class="plan-card" data-plan="basic">
+                  <p class="plan-name">Basic</p>
+                  <p class="plan-desc">Košenje do 250 m², prihranite vs. enkratno.</p>
+                  <p class="plan-price" id="basicPriceDisplay">50 €<span>/mesec</span></p>
+                  <ul class="plan-features" id="basicFeatures">
+                    <li>Košenje trave (do 250 m²)</li>
+                    <li>1× mesečno</li>
+                  </ul>
+                  <div class="plan-subtabs" role="group" aria-label="Paket Basic">
+                    <button class="plan-subtab on" type="button" data-tier="standard" aria-pressed="true">Standard<small>samo košenje</small></button>
+                    <button class="plan-subtab" type="button" data-tier="plus" aria-pressed="false">Plus<small>+ rob + odvoz</small></button>
+                    <button class="plan-subtab" type="button" data-tier="gold" aria-pressed="false">Gold<small>+ rob + odvoz + živica</small></button>
+                    <button class="plan-subtab" type="button" data-tier="premium" aria-pressed="false">Premium<small>2× mesečno</small></button>
+                  </div>
                 </div>
-                <div class="svc-options">
-                  <button class="svc-opt on" data-mult="1">Nizka (&lt;1m)</button>
-                  <button class="svc-opt" data-mult="1.3">Srednja (1–2m)</button>
-                  <button class="svc-opt" data-mult="1.7">Visoka (&gt;2m)</button>
+
+                <!-- PRO -->
+                <div class="plan-card featured" data-plan="pro">
+                  <div class="plan-badge">Najpogostejše</div>
+                  <p class="plan-name">Pro</p>
+                  <p class="plan-desc">Košenje do 500 m², prihranite vs. enkratno.</p>
+                  <p class="plan-price" id="proPriceDisplay">95 €<span>/mesec</span></p>
+                  <ul class="plan-features" id="proFeatures">
+                    <li>Košenje trave (do 500 m²)</li>
+                    <li>1× mesečno</li>
+                    <li>Prednostna obravnava</li>
+                  </ul>
+                  <div class="plan-subtabs" role="group" aria-label="Paket Pro">
+                    <button class="plan-subtab on" type="button" data-tier="standard" aria-pressed="true">Standard<small>samo košenje</small></button>
+                    <button class="plan-subtab" type="button" data-tier="plus" aria-pressed="false">Plus<small>+ rob + odvoz</small></button>
+                    <button class="plan-subtab" type="button" data-tier="gold" aria-pressed="false">Gold<small>+ rob + odvoz + živica</small></button>
+                    <button class="plan-subtab" type="button" data-tier="premium" aria-pressed="false">Premium<small>2× mesečno</small></button>
+                  </div>
                 </div>
+
+                <!-- CUSTOM: user inputs quantities, price = enkratno × 85% -->
+                <div class="plan-card plan-card-custom" data-plan="custom">
+                  <div class="custom-head">
+                    <div>
+                      <p class="plan-name">Custom</p>
+                      <p class="plan-desc">Sestavite paket po meri. 85 % enkratne cene.</p>
+                    </div>
+                    <p class="plan-price" id="customPriceDisplay">0 €<span>/mesec</span></p>
+                  </div>
+                  <div class="custom-freq" id="customFreq" role="group" aria-label="Pogostost">
+                    <button class="custom-freq-btn on" type="button" data-freq="1" aria-pressed="true">1× mesečno</button>
+                    <button class="custom-freq-btn" type="button" data-freq="2" aria-pressed="false">2× mesečno<span class="custom-freq-badge">−10 %</span></button>
+                  </div>
+                  <div class="custom-services">
+                    <div class="custom-svc" data-svc="lawn">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-lawn"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-lawn">Košenje trave</span>
+                        <span class="custom-svc-price" id="cPrice-lawn">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="decimal" placeholder="m²" min="0" class="custom-inp" id="cVal-lawn" aria-label="Košenje trave, m²"/>
+                          <span class="custom-unit">m²</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-svc" data-svc="hedge">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-hedge"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-hedge">Striženje živice</span>
+                        <span class="custom-svc-price" id="cPrice-hedge">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="decimal" placeholder="tm" min="0" class="custom-inp" id="cVal-hedge" aria-label="Striženje živice, tm"/>
+                          <span class="custom-unit">tm</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-svc" data-svc="edge">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-edge"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-edge">Rob trava/tlakovci</span>
+                        <span class="custom-svc-price" id="cPrice-edge">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="decimal" placeholder="tm" min="0" class="custom-inp" id="cVal-edge" aria-label="Rob trava/tlakovci, tm"/>
+                          <span class="custom-unit">tm</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-svc" data-svc="waste">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-waste"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-waste">Odvoz na deponijo</span>
+                        <span class="custom-svc-price" id="cPrice-waste">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="numeric" placeholder="1" min="1" step="1" class="custom-inp" id="cVal-waste" aria-label="Odvoz na deponijo, število voženj"/>
+                          <span class="custom-unit" data-svc="waste" data-unit-for="cVal-waste">vožnja</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-svc" data-svc="snow">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-snow"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-snow">Kidanje snega</span>
+                        <span class="custom-svc-price" id="cPrice-snow">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="decimal" placeholder="m²" min="0" class="custom-inp" id="cVal-snow" aria-label="Kidanje snega, m²"/>
+                          <span class="custom-unit">m²</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-svc" data-svc="shrub">
+                      <div class="custom-svc-check" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="csvclabel-shrub"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+                      <div class="custom-svc-body">
+                        <span class="custom-svc-label" id="csvclabel-shrub">Obrezovanje grmovja</span>
+                        <span class="custom-svc-price" id="cPrice-shrub">dodaj</span>
+                        <div class="custom-svc-input">
+                          <input type="number" inputmode="numeric" placeholder="kos" min="0" class="custom-inp" id="cVal-shrub" aria-label="Obrezovanje grmovja, kos"/>
+                          <span class="custom-unit">kos</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div class="svc-card" id="svc-edge">
-              <div class="svc-header">
-                <div class="svc-icon">⚠️</div>
-                <div class="svc-meta"><p class="svc-name">Rob trava/tlakovci</p><p class="svc-price">fiksno 20 €</p></div>
-                <div class="svc-toggle"></div>
+            <!-- Location -->
+            <div class="calc-location">
+              <label for="inpLocation"><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg>Lokacija</label>
+              <input class="loc-input" type="text" id="inpLocation" placeholder="Vaša ulica ali kraj (npr. Ptuj, Lenart, Slovenj Gradec...)" autocomplete="off"/>
+              <div class="loc-travel" id="travelCost">
+                <span id="travelLabel">Potni stroški</span>
+                <strong id="travelVal"></strong>
               </div>
-              <div class="svc-body">
-                <p class="svc-fixed-price">20 €</p>
-              </div>
-            </div>
-
-            <div class="svc-card" id="svc-waste">
-              <div class="svc-header">
-                <div class="svc-icon">🚛</div>
-                <div class="svc-meta"><p class="svc-name">Odvoz na deponijo</p><p class="svc-price">fiksno 30 €</p></div>
-                <div class="svc-toggle"></div>
-              </div>
-              <div class="svc-body">
-                <p class="svc-fixed-price">30 €</p>
-              </div>
-            </div>
-
-            <div class="svc-card" id="svc-snow">
-              <div class="svc-header">
-                <div class="svc-icon">❄️</div>
-                <div class="svc-meta"><p class="svc-name">Kidanje snega</p><p class="svc-price">5,00 €/m²</p></div>
-                <div class="svc-toggle"></div>
-              </div>
-              <div class="svc-body">
-                <div class="svc-input-row">
-                  <input class="svc-input" type="number" placeholder="npr. 60" min="0" id="val-snow"/>
-                  <span class="svc-unit">m²</span>
-                </div>
-                <div class="svc-options">
-                  <button class="svc-opt on" data-mult="1">Lahek sneg</button>
-                  <button class="svc-opt" data-mult="1.3">Moker sneg</button>
-                  <button class="svc-opt" data-mult="1.6">Led/trda plast</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="svc-card" id="svc-shrub">
-              <div class="svc-header">
-                <div class="svc-icon">🌳</div>
-                <div class="svc-meta"><p class="svc-name">Obrezovanje grmovja</p><p class="svc-price">od 10 €/kos</p></div>
-                <div class="svc-toggle"></div>
-              </div>
-              <div class="svc-body">
-                <div class="svc-input-row">
-                  <input class="svc-input" type="number" placeholder="npr. 4" min="0" id="val-shrub"/>
-                  <span class="svc-unit">kos</span>
-                </div>
-                <div class="svc-options">
-                  <button class="svc-opt on" data-mult="1">Manjše</button>
-                  <button class="svc-opt" data-mult="1.5">Srednje</button>
-                  <button class="svc-opt" data-mult="2.2">Veliko</button>
-                </div>
-              </div>
+              <small class="loc-small"><span class="loc-eg">Npr. Ptuj, Lenart, Slovenj Gradec...</span>Izhodišče: Maribor (brezplačno). Potni stroški = 0,60&nbsp;€/km&nbsp;×&nbsp;2 (povratna pot).</small>
             </div>
           </div>
-        </div>
 
-        <!-- NAROČNINA -->
-        <div id="panelSub" style="display:none">
-          <div class="plan-grid">
+          <aside class="calc-side">
+            <div class="calc-side-inner">
+              <!-- Quote -->
+              <div class="quote-box">
+                <p class="quote-section-label">Vaša ponudba</p>
+                <div id="quoteBody"><p class="quote-empty">Izberite vsaj eno storitev.</p></div>
+                <p id="quoteStatus" class="sr-only" role="status" aria-live="polite"></p>
+                <p class="quote-note">Cene so okvirne brez DDV. Točna cena po ogledu na&nbsp;terenu.</p>
+              </div>
 
-            <!-- BASIC -->
-            <div class="plan-card" data-plan="basic">
-              <p class="plan-name">Basic</p>
-              <p class="plan-desc">Košenje do 250 m² — prihranite vs. enkratno.</p>
-              <p class="plan-price" id="basicPriceDisplay">50 €<span>/mesec</span></p>
-              <ul class="plan-features" id="basicFeatures">
-                <li>Košenje trave (do 250 m²)</li>
-                <li>1× mesečno</li>
-              </ul>
-              <div class="plan-subtabs">
-                <button class="plan-subtab on" data-tier="standard">Standard<br><small>samo košenje</small></button>
-                <button class="plan-subtab" data-tier="plus">Plus<br><small>+ rob + odvoz</small></button>
-                <button class="plan-subtab" data-tier="gold">Gold<br><small>+ rob + odvoz + živica</small></button>
-                <button class="plan-subtab" data-tier="premium">Premium<br><small>2× mesečno</small></button>
+              <!-- Contact -->
+              <div class="contact-single">
+                <label for="inpContact" class="field-label">Kontakt</label>
+                <input class="c-input" type="text" id="inpContact" placeholder="Vaš e-mail ali telefonska številka" autocomplete="email"/>
+                <p id="contactErr" class="field-error" hidden></p>
+              </div>
+              <p class="consent-note">
+                Z&nbsp;oddajo povpraševanja soglašate z&nbsp;obdelavo vaših osebnih podatkov za namen odgovora na povpraševanje.
+                Podatki se ne posredujejo tretjim osebam. <a href="#" data-modal-open>Politika zasebnosti</a>
+              </p>
+              <p id="formErr" class="field-error" role="alert" hidden></p>
+              <div class="submit-row">
+                <button class="btn-submit" id="btnSubmit" type="button">Pošlji povpraševanje<svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></button>
+                <button class="btn-reset" id="btnReset" type="button">Ponastavi</button>
               </div>
             </div>
-
-            <!-- PRO -->
-            <div class="plan-card" data-plan="pro" style="border-color:#4caf50">
-              <div class="plan-badge">Najpogostejše</div>
-              <p class="plan-name">Pro</p>
-              <p class="plan-desc">Košenje do 500 m² — prihranite vs. enkratno.</p>
-              <p class="plan-price" id="proPriceDisplay">95 €<span>/mesec</span></p>
-              <ul class="plan-features" id="proFeatures">
-                <li>Košenje trave (do 500 m²)</li>
-                <li>1× mesečno</li>
-                <li>Prednostna obravnava</li>
-              </ul>
-              <div class="plan-subtabs">
-                <button class="plan-subtab on" data-tier="standard">Standard<br><small>samo košenje</small></button>
-                <button class="plan-subtab" data-tier="plus">Plus<br><small>+ rob + odvoz</small></button>
-                <button class="plan-subtab" data-tier="gold">Gold<br><small>+ rob + odvoz + živica</small></button>
-                <button class="plan-subtab" data-tier="premium">Premium<br><small>2× mesečno</small></button>
-              </div>
-            </div>
-
-            <!-- CUSTOM: user inputs quantities, price = enkratno × 85% -->
-            <div class="plan-card" data-plan="custom" data-base="0">
-              <p class="plan-name">Custom</p>
-              <p class="plan-desc">Sestavite paket po meri — 85% enkratne cene.</p>
-              <p class="plan-price" id="customPriceDisplay">— €<span>/mesec</span></p>
-              <div class="custom-freq" id="customFreq">
-                <button class="custom-freq-btn on" data-freq="1">1× mesečno</button>
-                <button class="custom-freq-btn" data-freq="2">2× mesečno<span class="custom-freq-badge">−10%</span></button>
-              </div>
-              <div class="custom-services">
-                <div class="custom-svc" data-svc="lawn" data-rate="0.25" data-type="area" data-unit="m²">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Košenje trave</span>
-                    <span class="custom-svc-price" id="cPrice-lawn">—</span>
-                    <div class="custom-svc-input" id="cInput-lawn" style="display:none">
-                      <input type="number" placeholder="m²" min="0" class="custom-inp" id="cVal-lawn"/>
-                      <span class="custom-unit">m²</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-svc" data-svc="hedge" data-rate="3.00" data-type="area" data-unit="tm">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Striženje živice</span>
-                    <span class="custom-svc-price" id="cPrice-hedge">—</span>
-                    <div class="custom-svc-input" id="cInput-hedge" style="display:none">
-                      <input type="number" placeholder="tm" min="0" class="custom-inp" id="cVal-hedge"/>
-                      <span class="custom-unit">tm</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-svc" data-svc="edge" data-rate="20" data-type="fixed">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Rob trava/tlakovci</span>
-                    <span class="custom-svc-price" id="cPrice-edge">—</span>
-                  </div>
-                </div>
-                <div class="custom-svc" data-svc="waste" data-rate="30" data-type="fixed">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Odvoz na deponijo</span>
-                    <span class="custom-svc-price" id="cPrice-waste">—</span>
-                  </div>
-                </div>
-                <div class="custom-svc" data-svc="snow" data-rate="5.00" data-type="area" data-unit="m²">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Kidanje snega</span>
-                    <span class="custom-svc-price" id="cPrice-snow">—</span>
-                    <div class="custom-svc-input" id="cInput-snow" style="display:none">
-                      <input type="number" placeholder="m²" min="0" class="custom-inp" id="cVal-snow"/>
-                      <span class="custom-unit">m²</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-svc" data-svc="shrub" data-rate="10" data-type="count" data-unit="kos">
-                  <div class="custom-svc-check">✓</div>
-                  <div class="custom-svc-body">
-                    <span class="custom-svc-label">Obrezovanje grmovja</span>
-                    <span class="custom-svc-price" id="cPrice-shrub">—</span>
-                    <div class="custom-svc-input" id="cInput-shrub" style="display:none">
-                      <input type="number" placeholder="kos" min="0" class="custom-inp" id="cVal-shrub"/>
-                      <span class="custom-unit">kos</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="custom-price-note"></p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Location -->
-        <div class="calc-location">
-          <label>📍 Lokacija</label>
-          <input class="loc-input" type="text" id="inpLocation" placeholder="Vaša ulica ali kraj (npr. Ptuj, Lenart, Slovenj Gradec...)" autocomplete="off"/>
-          <div class="loc-travel" id="travelCost">
-            <span id="travelLabel">Potni stroški</span>
-            <strong id="travelVal"></strong>
-          </div>
-          <small class="loc-small">Izhodišče: Maribor (brezplačno). Potni stroški = 0,60 €/km × 2 (povratna pot).</small>
-        </div>
-
-        <!-- Quote -->
-        <div class="quote-box">
-          <p class="quote-section-label">Vaša ponudba</p>
-          <div id="quoteBody"><p class="quote-empty">Izberite vsaj eno storitev.</p></div>
-          <p class="quote-note">Cene so okvirne brez DDV. Točna cena po ogledu na terenu.</p>
-        </div>
-
-        <!-- Contact -->
-        <div style="margin-bottom:6px;">
-          <input class="c-input" type="text" id="inpContact" placeholder="Vaš e-mail ali telefonska številka" style="width:100%;box-sizing:border-box;"/>
-        </div>
-        <p style="font-size:0.72rem;color:#4d7a52;margin-bottom:10px;line-height:1.5;">
-          Z oddajo povpraševanja soglašate z obdelavo vaših osebnih podatkov za namen odgovora na povpraševanje.
-          Podatki se ne posredujejo tretjim osebam. <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" style="color:#8fbc8f;text-decoration:underline;">Politika zasebnosti</a>
-        </p>
-        <div class="submit-row">
-          <button class="btn-submit" onclick="submitForm()">Pošlji povpraševanje ↗</button>
-          <button class="btn-reset" onclick="resetAll()">Ponastavi</button>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Privacy Policy Modal -->
-  <div id="privacyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;padding:20px;">
-    <div style="background:#0b3d26;border:1px solid #1a5c36;border-radius:16px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;padding:28px;color:#e8f5e9;position:relative;">
-      <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8fbc8f;font-size:1.4rem;cursor:pointer;">✕</button>
-      <h2 style="font-size:1.2rem;margin-bottom:16px;color:#fff;">Politika zasebnosti</h2>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:10px;">Upravljavec osebnih podatkov:</p>
-      <p style="font-size:0.85rem;margin-bottom:16px;">
-        <strong>ICARUS STUDIO, Tadej Jure Gorišek s.p.</strong><br/>
-        Sarajevska ulica 4, 2000 Maribor<br/>
-        MŠ: 9714472000 | DŠ: 42449545<br/>
-        E-mail: icarus.okolica@gmail.com
-      </p>
-      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Katere podatke zbiramo</h3>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Ob oddaji povpraševanja zbiramo vaš e-mail naslov ali telefonsko številko ter lokacijo, ki jo prostovoljno vpišete.</p>
-      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Namen obdelave</h3>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se uporabijo izključno za odgovor na vaše povpraševanje in morebitno sklenitev pogodbe o storitvi. Pravna podlaga je člen 6(1)(b) GDPR — obdelava je potrebna za izvajanje predpogodbenih ukrepov.</p>
-      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Hramba podatkov</h3>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se hranijo le toliko časa, kolikor je potrebno za namen obdelave, najdlje 1 leto od zadnjega stika.</p>
-      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Posredovanje tretjim osebam</h3>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Podatki se ne posredujejo tretjim osebam, razen ponudniku e-poštnih storitev (Resend Inc.) za tehnično dostavo sporočila, ki deluje kot obdelovalec podatkov.</p>
-      <h3 style="font-size:0.95rem;margin-bottom:8px;color:#a5d6a7;">Vaše pravice</h3>
-      <p style="font-size:0.82rem;color:#8fbc8f;margin-bottom:14px;">Imate pravico do dostopa, popravka, izbrisa in prenosljivosti vaših podatkov. Za uveljavljanje pravic nas kontaktirajte na <strong style="color:#e8f5e9;">tedejjure.gorisek@gmail.com</strong>. Pritožbo lahko vložite pri Informacijskem pooblaščencu RS (<a href="https://www.ip-rs.si" target="_blank" style="color:#4caf50;">ip-rs.si</a>).</p>
-      <button onclick="document.getElementById('privacyModal').style.display='none'" style="background:#248a4d;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:0.9rem;font-weight:700;cursor:pointer;width:100%;">Zapri</button>
+  <div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-box">
+      <div class="modal-body">
+        <button class="modal-x" type="button" data-modal-close aria-label="Zapri"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+        <h2 id="privacyTitle">Politika zasebnosti</h2>
+        <p class="modal-lead">Upravljavec osebnih podatkov:</p>
+        <p class="modal-controller">
+          <strong>ICARUS STUDIO, Tadej Jure Gorišek s.p.</strong><br/>
+          Sarajevska ulica 4, 2000 Maribor<br/>
+          MŠ: 9714472000 | DŠ: 42449545<br/>
+          E-mail: icarus.okolica@gmail.com
+        </p>
+        <h3>Katere podatke zbiramo</h3>
+        <p>Ob oddaji povpraševanja zbiramo vaš e-mail naslov ali telefonsko številko ter lokacijo, ki jo prostovoljno vpišete.</p>
+        <h3>Namen obdelave</h3>
+        <p>Podatki se uporabijo izključno za odgovor na vaše povpraševanje in morebitno sklenitev pogodbe o storitvi. Pravna podlaga je člen 6(1)(b) GDPR — obdelava je potrebna za izvajanje predpogodbenih ukrepov.</p>
+        <h3>Hramba podatkov</h3>
+        <p>Podatki se hranijo le toliko časa, kolikor je potrebno za namen obdelave, najdlje 1 leto od zadnjega stika.</p>
+        <h3>Posredovanje tretjim osebam</h3>
+        <p>Podatki se ne posredujejo tretjim osebam, razen ponudniku e-poštnih storitev (Resend Inc.) za tehnično dostavo sporočila, ki deluje kot obdelovalec podatkov.</p>
+        <h3>Vaše pravice</h3>
+        <p>Imate pravico do dostopa, popravka, izbrisa in prenosljivosti vaših podatkov. Za uveljavljanje pravic nas kontaktirajte na <strong>tadejjure.gorisek@gmail.com</strong>. Pritožbo lahko vložite pri Informacijskem pooblaščencu RS (<a href="https://www.ip-rs.si" target="_blank" rel="noopener">ip-rs.si</a>).</p>
+      </div>
+      <div class="modal-foot">
+        <button class="modal-btn" type="button" data-modal-close>Zapri</button>
+      </div>
     </div>
   </div>
 
   <footer class="footer">
-    <div class="container footer-content">
+    <div class="container footer-top">
       <div class="footer-brand">
-        <img src="/images/logo-nav.png" alt="Icarus okolica logo" class="footer-logo"/>
-        <strong>Icarus okolica</strong>
+        <img src="/images/logo-nav.png" alt="" class="footer-logo" width="56" height="40"/>
+        <div>
+          <strong>Icarus okolica</strong>
+          <span>Urejanje okolice, košenje in odstranjevanje&nbsp;snega.</span>
+        </div>
       </div>
-      <div style="text-align:right;font-size:0.75rem;color:#6b7c69;line-height:1.7;">
-        <span>ICARUS STUDIO, Tadej Jure Gorišek s.p. | Sarajevska ulica 4, 2000 Maribor</span><br/>
-        <span>MŠ: 9714472000 | DŠ: 42449545 | tedejjure.gorisek@gmail.com</span><br/>
-        <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" style="color:#6b7c69;text-decoration:underline;">Politika zasebnosti</a>
-        &nbsp;·&nbsp; © 2026 Vse pravice pridržane.
+      <nav class="footer-nav" aria-label="Noga strani">
+        <a href="#storitve">Storitve</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#onas">O nas</a>
+        <a href="#cenik">Izračun cene</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:xxx xxx xxx"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>xxx xxx xxx</a>
+        <a href="mailto:icarus.okolica@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-envelope-simple"/></svg>icarus.okolica@gmail.com</a>
       </div>
+    </div>
+    <div class="container footer-legal">
+      <span><span class="nw">ICARUS STUDIO, Tadej Jure Gorišek s.p.</span><span class="sep"> | </span><span class="nw">Sarajevska ulica 4, 2000 Maribor</span></span>
+      <span><span class="nw">MŠ: 9714472000 | DŠ: 42449545</span><span class="sep"> | </span><span class="nw">tadejjure.gorisek@gmail.com</span></span>
+      <span><a href="#" data-modal-open>Politika zasebnosti</a> &nbsp;·&nbsp; © 2026 Vse pravice pridržane.</span>
     </div>
   </footer>
 
