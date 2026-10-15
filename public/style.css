@@ -584,6 +584,60 @@ button { font: inherit; }
 }
 .features li > span:last-child { color: var(--text-2); }
 
+/* ── Business clients (one panel under the services) ─────── */
+.biz { padding-top: 0; }
+.biz-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 56px;
+  align-items: center;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+}
+.biz-media {
+  margin: 0;
+  align-self: stretch;
+  min-height: 420px;
+  border-radius: var(--r-ctl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.biz-media picture, .biz-media img { width: 100%; height: 100%; }
+.biz-media img { object-fit: cover; object-position: 72% 50%; }
+.biz-lead { margin-top: 16px; color: var(--text-2); font-size: 1.08rem; max-width: 52ch; }
+.biz-list {
+  list-style: none; padding: 0; margin: 28px 0 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px;
+}
+.biz-list li { display: flex; gap: 10px; align-items: flex-start; }
+.biz-list .ico { width: 20px; height: 20px; margin-top: 3px; color: var(--accent); }
+.biz-facts {
+  list-style: none; padding: 0; margin: 28px 0 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+}
+.biz-facts li {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-ctl);
+  background: rgba(10, 25, 18, 0.35);
+}
+.biz-facts strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.biz-facts span { display: block; color: var(--text-2); font-size: 0.92rem; line-height: 1.45; }
+.biz-cta { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
+.biz-note { color: var(--text-3); font-size: 0.95rem; }
+/* Small laptops: the copy column is too narrow for three fact cards side by side. */
+@media (min-width: 961px) and (max-width: 1180px) {
+  .biz-facts { grid-template-columns: 1fr; }
+}
+
 /* ── Calculator ──────────────────────────────────────────── */
 .calc-section {
   position: relative;
@@ -1060,6 +1114,8 @@ button { font: inherit; }
   .tile-lg { grid-column: 1 / -1; grid-row: auto; min-height: 460px; }
 
   .gallery-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .biz-grid { grid-template-columns: 1fr; gap: 32px; padding: 28px; }
+  .biz-media { min-height: 0; aspect-ratio: 16 / 9; }
   .ba-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
   .ba-tab { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px; font-size: 0.92rem; }
   .about-media { aspect-ratio: 4 / 3; max-height: none; }
@@ -1082,6 +1138,9 @@ button { font: inherit; }
   .ba-tabs { grid-template-columns: 1fr; }
   .ba-tab { flex-direction: row; align-items: center; }
   .svc-grid, .plan-grid { grid-template-columns: 1fr; }
+  .biz-grid { padding: 20px; gap: 24px; }
+  .biz-list, .biz-facts { grid-template-columns: 1fr; }
+  .biz-cta .btn { flex: 1 1 auto; justify-content: center; }
   .custom-services { grid-template-columns: 1fr; }
   .custom-head { flex-direction: column; gap: 8px; }
   .submit-row { grid-template-columns: 1fr; }

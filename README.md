@@ -62,6 +62,10 @@ labels in `index.html` must be kept in sync by hand.
 
 ## Design & assets
 
+- Business clients: the `#podjetja` section ("Za poslovne objekte", linked from the header and footer nav) sells
+  year-round grounds maintenance for business buildings. It has no prices on purpose (each object gets an offer
+  after a free site visit); its CTA is a `mailto:` to icarus.okolica@gmail.com with a prefilled subject.
+
 - Forest-dark theme, ONE accent: the logo's gold (`--accent` in `public/style.css`). Radius rule: cards 20px,
   inputs 12px, buttons/pills fully rounded. Fonts: Bricolage Grotesque (display) + Geist (body), Google Fonts.
 - Icons: inline Phosphor SVG sprite at the top of `index.html` (`<use href="#i-name"/>`); `script.js` uses
